@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Heebo&display=swap');
+
+/* CSS DEBUGGING TOOL
+
+* {
+  outline: solid red 1px !important;
+} */
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0fbfc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3d5a8075;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d5a80;
+}
