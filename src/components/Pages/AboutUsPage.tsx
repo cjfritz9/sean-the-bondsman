@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box }  from '@chakra-ui/react'
 
-const AboutUs: React.FC = () => {
+const AboutUsPage: React.FC = () => {
+
   return (
     <Box>
       
@@ -9,4 +10,4 @@ const AboutUs: React.FC = () => {
   );
 }
 
-export default AboutUs;
+export default AboutUsPage;

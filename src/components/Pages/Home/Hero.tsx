@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
         w='100%'
         zIndex={1}
         alignItems='center'
-        bgColor='#00000025'
+        bgColor='#00000099'
       >
         <Heading w='100%' variant='heroText' mt={['8rem', '10rem', '14rem']}>
           CALL FOR FREE BOND ADVICE
@@ -68,7 +68,6 @@ const Hero: React.FC = () => {
         src={HeroImage}
         objectFit='cover'
         objectPosition='center center'
-        filter='brightness(25%)'
       />
     </Box>
   );

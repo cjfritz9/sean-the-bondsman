@@ -8,6 +8,42 @@ export class SiteProvider extends React.Component {
     isLoading: false
   };
 
+  updatePageTitle = (pathname: string) => {
+    const baseTitle =
+      ' | Topeka Bail Bonds';
+    let pageTitle = '';
+
+    if (pathname === '/') {
+      return 'Topeka Bail Bonds | Kansas Multiple County Bail Assistance & Expert Help'
+    }
+
+    if (pathname === '/forms-and-info') {
+      pageTitle = 'Forms & Info'
+    }
+
+    if (pathname === '/jail-info') {
+      pageTitle = 'Jail Information'
+    }
+
+    if (pathname === '/apex') {
+      pageTitle = 'Apex Monitoring'
+    }
+
+    if (pathname === '/about-us') {
+      pageTitle = 'About Us'
+    }
+
+    if (pathname === '/contact-us') {
+      pageTitle = 'Contact Us'
+    }
+
+    if (pathname === '/faq') {
+      pageTitle = 'Frequently Asked Questions'
+    }
+
+    return pageTitle + baseTitle;
+  };
+
   setIsHovering = (bool: boolean) => {
     this.setState({ isHovering: bool });
   };
@@ -22,7 +58,8 @@ export class SiteProvider extends React.Component {
         value={{
           ...this.state,
           setIsHovering: this.setIsHovering,
-          setIsLoading: this.setIsLoading
+          setIsLoading: this.setIsLoading,
+          updatePageTitle: this.updatePageTitle
         }}
       >
         {

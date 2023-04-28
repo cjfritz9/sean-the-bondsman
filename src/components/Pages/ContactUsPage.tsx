@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box }  from '@chakra-ui/react'
 
-const ContactUs: React.FC = () => {
+const ContactUsPage: React.FC = () => {
   return (
     <Box>
       
@@ -9,4 +9,4 @@ const ContactUs: React.FC = () => {
   );
 }
 
-export default ContactUs;
+export default ContactUsPage;

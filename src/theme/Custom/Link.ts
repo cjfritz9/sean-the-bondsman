@@ -6,3 +6,10 @@ export const headerLink = defineStyle({
   fontFamily: 'ABeeZee',
   fontWeight: 'bold'
 })
+
+export const headerLinkSelected = defineStyle({
+  fontSize: ['20px', '16px'],
+  color: 'Brand.Celestial',
+  fontFamily: 'ABeeZee',
+  fontWeight: 'bold'
+})

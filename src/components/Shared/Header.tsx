@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Divider,
@@ -8,16 +8,19 @@ import {
   Link,
   Stack,
   useMediaQuery,
-  Text
+  Text,
+  Image
 } from '@chakra-ui/react';
-import { Link as ReactLink } from 'react-router-dom';
+import { Link as ReactLink, useLocation } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
-import { GiHandcuffs } from 'react-icons/gi';
 import { BsInfoSquare, BsChevronUp } from 'react-icons/bs';
 import { FaWpforms } from 'react-icons/fa';
+import logoSM from '../../assets/logo-sm.webp'
 
 const Header: React.FC = () => {
   const [isLessThan768] = useMediaQuery(['(max-width: 768px)']);
+
+  const location = useLocation();
 
   if (isLessThan768) {
     return (
@@ -60,31 +63,31 @@ const Header: React.FC = () => {
     );
   } else {
     return (
-      <Box w='100%' h='72px' bgColor='Brand.Penn' px='14rem'>
+      <Box w='100%' h='80px' bgColor='Brand.Penn' px={['1rem','1rem','2rem','4rem','8rem','14rem']}>
         <Flex h='100%' alignItems='center' justify='space-between'>
           <Flex as={ReactLink} to='/' gap='1rem' h='100%' alignItems='center'>
-            <Icon as={GiHandcuffs} h='50px' w='50px' color='Brand.French' />
+            <Image src={logoSM} h='72px' />
             <Heading fontSize='24px' color='Brand.French' fontFamily='Heebo'>
-              Bail Bonds Topeka
+              Topeka Bail Bonds
             </Heading>
           </Flex>
           <Flex gap='2rem'>
-            <Link as={ReactLink} variant='headerLink' to='/forms-and-info'>
+            <Link as={ReactLink} variant={location.pathname === '/forms-and-info' ? 'headerLinkSelected' : 'headerLink'} to='/forms-and-info'>
               Forms & Info
             </Link>
-            <Link as={ReactLink} variant='headerLink' to='/jail-info'>
+            <Link as={ReactLink} variant={location.pathname === '/jail-info' ? 'headerLinkSelected' : 'headerLink'} to='/jail-info'>
               Jail Information
             </Link>
-            <Link as={ReactLink} variant='headerLink' to='/apex'>
+            <Link as={ReactLink} variant={location.pathname === '/apex' ? 'headerLinkSelected' : 'headerLink'} to='/apex'>
               Apex Monitoring
             </Link>
-            <Link as={ReactLink} variant='headerLink' to='/about-us'>
+            <Link as={ReactLink} variant={location.pathname === '/about-us' ? 'headerLinkSelected' : 'headerLink'} to='/about-us'>
               About Us
             </Link>
-            <Link as={ReactLink} variant='headerLink' to='/contact-us'>
+            <Link as={ReactLink} variant={location.pathname === '/contact-us' ? 'headerLinkSelected' : 'headerLink'} to='/contact-us'>
               Contact Us
             </Link>
-            <Link as={ReactLink} variant='headerLink' to='/faq'>
+            <Link as={ReactLink} variant={location.pathname === '/faq' ? 'headerLinkSelected' : 'headerLink'} to='/faq'>
               FAQ
             </Link>
           </Flex>

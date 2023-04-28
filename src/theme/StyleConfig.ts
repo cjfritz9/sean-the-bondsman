@@ -1,10 +1,10 @@
 import { defineStyleConfig } from '@chakra-ui/react';
-import { headerLink } from './Custom/Link';
+import { headerLink, headerLinkSelected } from './Custom/Link';
 import { heroText, heroSubtext } from './Custom/Heading';
 import { baseButton, altButton } from './Custom/Button';
 
 export const link = defineStyleConfig({
-  variants: { headerLink }
+  variants: { headerLink, headerLinkSelected }
 });
 
 export const heading = defineStyleConfig({
