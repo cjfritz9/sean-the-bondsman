@@ -30,6 +30,7 @@ const BailBondInfo: React.FC = () => {
         gap={isGreaterThan768 ? '0rem' : '1rem'}
       >
         <Stack
+          h={isGreaterThan768 ? '744px' : undefined}
           w={['336px', '480px']}
           mx='1rem'
           bgColor='Brand.White'
