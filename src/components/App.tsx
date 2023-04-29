@@ -13,23 +13,33 @@ import ContactUsPage from './Pages/ContactUsPage';
 import FAQPage from './Pages/FAQPage';
 import Announcement from './Shared/Announcement';
 
+import bgImage from '../assets/handcuffs-off.jpg';
+import mobileBg from '../assets/handcuffs-off-mobile.jpg';
+
 const App: React.FC = () => {
   const [isGreaterThan768] = useMediaQuery(['(min-width: 768px)']);
-  const { updatePageTitle, isLoading } = useContext<any>(SiteContext);
+  const { updatePageTitle, setIsGreaterThan768, isLoading } =
+    useContext<any>(SiteContext);
   const location = useLocation();
 
   useEffect(() => {
     document.title = updatePageTitle(location.pathname);
   }, [location]);
 
+  useEffect(() => {
+    setIsGreaterThan768(isGreaterThan768);
+  }, [isGreaterThan768]);
+
   return (
     <Box
       minH='100dvh'
       maxW='100dvw'
       overflowX='hidden'
-      bgColor='Brand.Celestial'
+      bgColor='Brand.White'
+      bgImage={isGreaterThan768 ? bgImage : mobileBg}
+      bgAttachment='fixed'
       fontFamily='ABeeZee'
-      // mt='72px'
+      mb={isGreaterThan768 ? '0px' : '112px'}
     >
       {/* {isGreaterThan768 && <Cursor />} */}
       <Header />

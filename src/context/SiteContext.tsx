@@ -4,52 +4,51 @@ export const SiteContext = React.createContext({});
 
 export class SiteProvider extends React.Component {
   state = {
-    isHovering: false,
-    isLoading: false
+    isLoading: false,
+    isGreaterThan768: false
   };
 
   updatePageTitle = (pathname: string) => {
-    const baseTitle =
-      ' | Topeka Bail Bonds';
+    const baseTitle = ' | Topeka Bail Bonds';
     let pageTitle = '';
 
     if (pathname === '/') {
-      return 'Topeka Bail Bonds | Kansas Multiple County Bail Assistance & Expert Help'
+      return 'Topeka Bail Bonds | Kansas Multiple County Bail Assistance & Expert Help';
     }
 
     if (pathname === '/forms-and-info') {
-      pageTitle = 'Forms & Info'
+      pageTitle = 'Forms & Info';
     }
 
     if (pathname === '/jail-info') {
-      pageTitle = 'Jail Information'
+      pageTitle = 'Jail Information';
     }
 
     if (pathname === '/apex') {
-      pageTitle = 'Apex Monitoring'
+      pageTitle = 'Apex Monitoring';
     }
 
     if (pathname === '/about-us') {
-      pageTitle = 'About Us'
+      pageTitle = 'About Us';
     }
 
     if (pathname === '/contact-us') {
-      pageTitle = 'Contact Us'
+      pageTitle = 'Contact Us';
     }
 
     if (pathname === '/faq') {
-      pageTitle = 'Frequently Asked Questions'
+      pageTitle = 'Frequently Asked Questions';
     }
 
     return pageTitle + baseTitle;
   };
 
-  setIsHovering = (bool: boolean) => {
-    this.setState({ isHovering: bool });
-  };
-
   setIsLoading = (bool: boolean) => {
     this.setState({ isLoading: bool });
+  };
+
+  setIsGreaterThan768 = (isGreaterThan768: boolean) => {
+    this.setState({ isGreaterThan768 });
   };
 
   render() {
@@ -57,8 +56,8 @@ export class SiteProvider extends React.Component {
       <SiteContext.Provider
         value={{
           ...this.state,
-          setIsHovering: this.setIsHovering,
           setIsLoading: this.setIsLoading,
+          setIsGreaterThan768: this.setIsGreaterThan768,
           updatePageTitle: this.updatePageTitle
         }}
       >

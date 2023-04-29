@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   Box,
   Button,
@@ -10,23 +10,25 @@ import {
   useMediaQuery
 } from '@chakra-ui/react';
 import HeroImage from '../../../assets/topeka-capital-building.jpg';
+import CuffsOff from '../../../assets/handcuffs-off.jpg';
 import { useNavigate } from 'react-router';
+import { SiteContext } from '../../../context/SiteContext';
 
 const Hero: React.FC = () => {
   const [showCallTooltip, setShowCallTooltip] = useState(false);
-  const [isLessThan768] = useMediaQuery('(max-width: 768px)');
+  const { isGreaterThan768 } = useContext<any>(SiteContext);
 
   const navigate = useNavigate();
 
   const handleCall = () => {
-    if (isLessThan768) {
-      window.open('tel:7859692735');
-    } else {
+    if (isGreaterThan768) {
       navigator.clipboard.writeText('7859692735');
       setShowCallTooltip(true);
       setTimeout(() => {
         setShowCallTooltip(false);
       }, 2500);
+    } else {
+      window.open('tel:7859692735');
     }
   };
 
@@ -36,14 +38,7 @@ const Hero: React.FC = () => {
 
   return (
     <Box w='100%'>
-      <Stack
-        pos='absolute'
-        h='720px'
-        w='100%'
-        zIndex={1}
-        alignItems='center'
-        bgColor='#00000099'
-      >
+      <Stack h='720px' w='100%' zIndex={1} alignItems='center'>
         <Heading w='100%' variant='heroText' mt={['8rem', '10rem', '14rem']}>
           CALL FOR FREE BOND ADVICE
         </Heading>
@@ -63,12 +58,14 @@ const Hero: React.FC = () => {
           </Button>
         </Flex>
       </Stack>
-      <Image
-        h='720px'
-        src={HeroImage}
+      {/* <Image
+        h='100dvh'
+        w='100%'
+        src={CuffsOff}
         objectFit='cover'
         objectPosition='center center'
-      />
+        filter='brightness(.25)'
+      /> */}
     </Box>
   );
 };

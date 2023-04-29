@@ -19,3 +19,12 @@ export const heroSubtext = defineStyle({
   textShadow: '0 0 3px black',
   transition: 'font-size .3s ease'
 });
+
+// 'iwt' = image with text
+export const iwtTitle = defineStyle({
+  pointerEvents: 'none',
+  textAlign: 'left',
+  fontSize: ['24px', '28px', '32px'],
+  fontFamily: 'heebo',
+  color: 'black',
+});

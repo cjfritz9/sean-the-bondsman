@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   Box,
   Divider,
@@ -16,13 +16,15 @@ import { AiFillHome } from 'react-icons/ai';
 import { BsInfoSquare, BsChevronUp } from 'react-icons/bs';
 import { FaWpforms } from 'react-icons/fa';
 import logoSM from '../../assets/logo-sm.webp'
+import { SiteContext } from '../../context/SiteContext';
 
 const Header: React.FC = () => {
-  const [isLessThan768] = useMediaQuery(['(max-width: 768px)']);
+  const { isGreaterThan768 } = useContext<any>(SiteContext);
+
 
   const location = useLocation();
 
-  if (isLessThan768) {
+  if (!isGreaterThan768) {
     return (
       <Box
         pos='fixed'
