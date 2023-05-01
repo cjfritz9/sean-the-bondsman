@@ -12,7 +12,7 @@ const theme = extendTheme({
       White: '#FFFFFF',
       French: '#D7C9CE',
       Celestial: '#2A94D4',
-      Penn: '#1C205F',
+      Penn: '#0D2533',
       Persian: '#2541B2',
       Rose: '#AF929D'
     }

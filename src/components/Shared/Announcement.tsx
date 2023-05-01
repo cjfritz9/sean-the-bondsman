@@ -7,7 +7,7 @@ const Announcement: React.FC = () => {
     <Box
       _hover={{ filter: 'brightness(1.2)' }}
       h='40px'
-      bgColor='Brand.Rose'
+      bgColor='Brand.French'
       cursor='pointer'
     >
       <Tooltip label='This will link to DocuSign'>
