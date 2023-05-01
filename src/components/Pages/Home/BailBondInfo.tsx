@@ -11,7 +11,7 @@ const BailBondInfo: React.FC = () => {
       px={['1rem', '1rem', '2rem', '4rem', '8rem', '14rem']}
       py='2rem'
       alignItems='center'
-      bgColor='Brand.French'
+      bgColor='Brand.Rose'
     >
       <Heading
         size='xl'
@@ -33,6 +33,7 @@ const BailBondInfo: React.FC = () => {
           h={isGreaterThan768 ? '744px' : undefined}
           w={['336px', '480px']}
           mx='1rem'
+          justifyContent='center'
           bgColor='Brand.White'
           px='2.5rem'
           py='1.5rem'
@@ -41,7 +42,8 @@ const BailBondInfo: React.FC = () => {
             '20px 0px 0px 20px',
             '20px 0px 0px 20px'
           ]}
-          gap='1rem'
+          fontSize={['14px', '14px', '16px']}
+          gap={['1rem', '1rem', '2rem']}
           textAlign={['center', 'center', 'left']}
         >
           <Text letterSpacing='wide'>
@@ -54,10 +56,10 @@ const BailBondInfo: React.FC = () => {
           </Text>
           <Text letterSpacing='wide'>
             A bail bondsman is a professional who posts bail on behalf of a
-            defendant. Bail bondsmen charge a fee, which is a
-            percentage of the bail amount. In most cases, bail bondsmen will
-            require collateral before they post bail. This can be in the form of
-            property, cash or investments.
+            defendant. Bail bondsmen charge a fee, which is a percentage of the
+            bail amount. In most cases, bail bondsmen will require collateral
+            before they post bail. This can be in the form of property, cash or
+            investments.
           </Text>
           <Text letterSpacing='wide'>
             If the defendant fails to appear for their court date, the bail
@@ -72,6 +74,7 @@ const BailBondInfo: React.FC = () => {
           mx='1rem'
           gap='1rem'
           textAlign={['center', 'center', 'right']}
+          fontSize={['14px', '14px', '16px']}
         >
           <Box
             bgColor='Brand.White'

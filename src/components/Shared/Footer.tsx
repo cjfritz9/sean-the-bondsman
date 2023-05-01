@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <Box w='100%' py='.5rem' bgColor='Brand.Persian'>
+    <Box w='100%' py='.5rem' bgColor='Brand.Penn'>
       <Flex
         w='100%'
         gap='1rem'

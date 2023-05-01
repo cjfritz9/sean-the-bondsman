@@ -11,14 +11,13 @@ import { SiteContext } from '../../context/SiteContext';
 import { useInView } from 'framer-motion';
 
 const HomePage: React.FC = () => {
-  const mapRef = useRef(null);
-  const isMapInView = useInView(mapRef);
-  const { isGreaterThan768, updateBgImage } =
-    useContext<any>(SiteContext);
+  const altImgRef = useRef(null);
+  const isInView = useInView(altImgRef, { margin: '0px 100px 0px 0px' });
+  const { isGreaterThan768, updateBgImage } = useContext<any>(SiteContext);
 
   useEffect(() => {
-    updateBgImage(isMapInView ? 'alternate' : 'default');
-  }, [isMapInView]);
+    updateBgImage(isInView ? 'alternate' : 'default');
+  }, [isInView]);
 
   return (
     <Box>
@@ -27,8 +26,8 @@ const HomePage: React.FC = () => {
       <GetStartedBanner />
       <BailBondInfo />
       {isGreaterThan768 && <CoverageBanner />}
-      <Map mapRef={mapRef} />
-      <Resources />
+      <Map />
+      <Resources altImgRef={altImgRef} />
     </Box>
   );
 };

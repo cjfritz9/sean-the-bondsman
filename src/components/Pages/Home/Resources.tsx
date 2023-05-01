@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { MutableRefObject, useState } from 'react';
 import {
   Box,
   Divider,
@@ -12,7 +12,11 @@ import { BsSearch, BsStarFill } from 'react-icons/bs';
 import { MdLocalPolice } from 'react-icons/md';
 import { GoLaw } from 'react-icons/go';
 
-const Resources: React.FC = () => {
+interface ResourcesProps {
+  altImgRef: MutableRefObject<any>;
+}
+
+const Resources: React.FC<ResourcesProps> = ({altImgRef}) => {
   const [isHovered, setIsHovered] = useState<0 | 1 | 2 | 3 | 4>(0);
 
   const resetHover = () => {
@@ -24,10 +28,12 @@ const Resources: React.FC = () => {
   };
 
   return (
-    <Box w='100%' py={['2rem', '3rem', '6rem']} px='1rem'>
+    <Box w='100%' py={['2rem', '3rem', '6rem']} px='1rem'
+    ref={altImgRef}
+    >
       <Stack w='100%' alignItems='center' gap='2rem'>
         <Stack>
-          <Heading variant='heroSubtext' color='white'>
+          <Heading variant='heroSubtext' color='white' mb='2rem'>
             Helpful Resources
           </Heading>
           <Divider />
@@ -41,6 +47,7 @@ const Resources: React.FC = () => {
           gap='4rem'
           color='Brand.Celestial'
           flexWrap='wrap'
+          h={['100%', '100%', '100%','200px']}
         >
           <Stack
             alignItems='center'
