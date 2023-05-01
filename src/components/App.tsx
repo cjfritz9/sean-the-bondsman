@@ -12,13 +12,16 @@ import ApexMonitoringPage from './Pages/ApexMonitoringPage';
 import ContactUsPage from './Pages/ContactUsPage';
 import FAQPage from './Pages/FAQPage';
 import Announcement from './Shared/Announcement';
+import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 
-import bgImage from '../assets/handcuffs-off.jpg';
+import backgroundImage from '../assets/handcuffs-off.jpg';
 import mobileBg from '../assets/handcuffs-off-mobile.jpg';
+import alternateBg from '../assets/topeka-capital-building.jpg';
+import mobileAltBg from '../assets/topeka-capital-building-mobile.jpg';
 
 const App: React.FC = () => {
   const [isGreaterThan768] = useMediaQuery(['(min-width: 768px)']);
-  const { updatePageTitle, setIsGreaterThan768, isLoading } =
+  const { updatePageTitle, setIsGreaterThan768, bgImage, isLoading } =
     useContext<any>(SiteContext);
   const location = useLocation();
 
@@ -30,16 +33,26 @@ const App: React.FC = () => {
     setIsGreaterThan768(isGreaterThan768);
   }, [isGreaterThan768]);
 
+  console.log(isGreaterThan768, bgImage);
+
   return (
     <Box
       minH='100dvh'
       maxW='100dvw'
       overflowX='hidden'
       bgColor='Brand.White'
-      bgImage={isGreaterThan768 ? bgImage : mobileBg}
+      bgImage={
+        isGreaterThan768 && bgImage === 'default'
+          ? backgroundImage
+          : !isGreaterThan768 && bgImage === 'default'
+          ? mobileBg
+          : isGreaterThan768 && bgImage === 'alternate'
+          ? alternateBg
+          : mobileAltBg
+      }
       bgAttachment='fixed'
       fontFamily='ABeeZee'
-      mb={isGreaterThan768 ? '0px' : '112px'}
+      bgPosition='center'
     >
       {/* {isGreaterThan768 && <Cursor />} */}
       <Header />
@@ -54,6 +67,7 @@ const App: React.FC = () => {
         <Route path='/about-us' element={<AboutUsPage />} />
         <Route path='/contact-us' element={<ContactUsPage />} />
         <Route path='/faq' element={<FAQPage />} />
+        <Route path='/privacy' element={<PrivacyPolicyPage />} />
       </Routes>
       {/* <Ankle /> */}
       <Footer />

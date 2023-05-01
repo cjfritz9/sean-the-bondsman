@@ -4,8 +4,10 @@ export const SiteContext = React.createContext({});
 
 export class SiteProvider extends React.Component {
   state = {
+    isMenuOpen: false,
     isLoading: false,
-    isGreaterThan768: false
+    isGreaterThan768: true,
+    bgImage: 'default'
   };
 
   updatePageTitle = (pathname: string) => {
@@ -40,7 +42,15 @@ export class SiteProvider extends React.Component {
       pageTitle = 'Frequently Asked Questions';
     }
 
+    if (pathname === '/privacy') {
+      pageTitle = 'Privacy Policy';
+    }
+
     return pageTitle + baseTitle;
+  };
+
+  updateBgImage = (image: 'default' | 'alternate') => {
+    this.setState({ bgImage: image });
   };
 
   setIsLoading = (bool: boolean) => {
@@ -51,14 +61,20 @@ export class SiteProvider extends React.Component {
     this.setState({ isGreaterThan768 });
   };
 
+  setIsMenuOpen = (bool: boolean) => {
+    this.setState({ isMenuOpen: bool });
+  };
+
   render() {
     return (
       <SiteContext.Provider
         value={{
           ...this.state,
+          setIsMenuOpen: this.setIsMenuOpen,
           setIsLoading: this.setIsLoading,
           setIsGreaterThan768: this.setIsGreaterThan768,
-          updatePageTitle: this.updatePageTitle
+          updatePageTitle: this.updatePageTitle,
+          updateBgImage: this.updateBgImage
         }}
       >
         {

@@ -1,14 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { Box } from '@chakra-ui/react';
 import Hero from './Home/Hero';
 import HowWeHelp from './Home/HowWeHelp';
 import GetStartedBanner from './Home/GetStartedBanner';
 import BailBondInfo from './Home/BailBondInfo';
 import CoverageBanner from './Home/CoverageBanner';
+import Map from './Home/Map';
+import Resources from './Home/Resources';
 import { SiteContext } from '../../context/SiteContext';
+import { useInView } from 'framer-motion';
 
 const HomePage: React.FC = () => {
-  const { isGreaterThan768 } = useContext<any>(SiteContext);
+  const mapRef = useRef(null);
+  const isMapInView = useInView(mapRef);
+  const { isGreaterThan768, updateBgImage } =
+    useContext<any>(SiteContext);
+
+  useEffect(() => {
+    updateBgImage(isMapInView ? 'alternate' : 'default');
+  }, [isMapInView]);
 
   return (
     <Box>
@@ -17,6 +27,8 @@ const HomePage: React.FC = () => {
       <GetStartedBanner />
       <BailBondInfo />
       {isGreaterThan768 && <CoverageBanner />}
+      <Map mapRef={mapRef} />
+      <Resources />
     </Box>
   );
 };

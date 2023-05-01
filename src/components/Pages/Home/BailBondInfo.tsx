@@ -24,7 +24,7 @@ const BailBondInfo: React.FC = () => {
       </Heading>
       <Flex
         as={isGreaterThan768 ? Flex : Stack}
-        maxH={isGreaterThan768 ? undefined : '950px'}
+        maxH={isGreaterThan768 ? undefined : '450px'}
         overflowY={isGreaterThan768 ? undefined : 'scroll'}
         alignItems='center'
         gap={isGreaterThan768 ? '0rem' : '1rem'}
@@ -53,19 +53,18 @@ const BailBondInfo: React.FC = () => {
             the property of their family members.
           </Text>
           <Text letterSpacing='wide'>
-            If the defendant fails to appear in court on the scheduled trial
-            date, the bondsman can employ a bounty hunter to locate them or take
-            legal action against them. Moreover, the bail bond agency can
-            recover any unpaid funds by seizing the assets that were pledged as
-            collateral.
+            A bail bondsman is a professional who posts bail on behalf of a
+            defendant. Bail bondsmen charge a fee, which is a
+            percentage of the bail amount. In most cases, bail bondsmen will
+            require collateral before they post bail. This can be in the form of
+            property, cash or investments.
           </Text>
           <Text letterSpacing='wide'>
-            In case of a no-show by the defendant, the bondsman has the right to
-            not only engage a bounty hunter to locate the defendant but also to
-            sue them for the bail bond money given to the court. Additionally,
-            the bail bond agency can reclaim any outstanding amount by claiming
-            the assets of the defendant or those who agreed to provide financial
-            support to them by signing a contract.
+            If the defendant fails to appear for their court date, the bail
+            bondsman will be responsible for paying the bail amount to the
+            court. The bail bond contract will also stipulate that the bail
+            bondsman has the right to apprehend and surrender the defendant to
+            authorities in order to recoup their losses.
           </Text>
         </Stack>
         <Stack

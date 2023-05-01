@@ -12,7 +12,7 @@ const GetStartedBanner: React.FC = () => {
     >
       <Heading variant='heroText'>Get Started</Heading>
       <Heading size='lg' color='Brand.White' fontFamily='inherit' textAlign='center' textShadow='0 0 3px black'>
-        Our forms can be filled out online - bail your loved one out ASAP!
+        Our forms can be filled out online - bail your loved one out now!
       </Heading>
       <Button variant='altButton' fontSize='20px'>GO</Button>
     </Stack>
