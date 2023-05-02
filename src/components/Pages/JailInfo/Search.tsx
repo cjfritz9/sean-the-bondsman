@@ -12,27 +12,54 @@ import { JailData, jails1, jails2, jails3, jails4 } from './JailData';
 
 interface SearchProps {
   setSearchResults: (results: any) => void;
+  setSearchLoading: (loading: boolean) => void;
+  setNoResults: (noResults: boolean) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ setSearchResults }) => {
+//@ts-ignore
+const Search: React.FC<SearchProps> = ({
+  setSearchResults,
+  setSearchLoading,
+  setNoResults
+}) => {
   const [searchInput, setSearchInput] = useState('');
 
   useEffect(() => {
-    let abort = true;
-    setTimeout(() => {
-      abort = false;
-    }, 500);
-    if (!abort) {
-      const jails = [...jails1, ...jails2, ...jails3, ...jails4];
-      jails.forEach((jail) => {
-        Object.keys(jail).forEach((field) => {
-          if (field.toLowerCase() === searchInput.toLowerCase()) {
-            setSearchResults((prev: any) => [...prev, jail]);
-          }
-        });
-      });
+    setSearchLoading(true)
+    if (searchInput.length === 0 || searchInput.charAt(0) === ' ') {
+      setSearchResults([]);
+      setSearchLoading(false);
+      setNoResults(false);
+      return;
     }
+    const jails = [...jails1, ...jails2, ...jails3, ...jails4];
+    const results = jails.filter((jail) => {
+      return jail.name.toLowerCase().includes(searchInput.toLowerCase());
+    });
+    setSearchResults(results);
+    if (results.length === 0) {
+      setNoResults(true);
+    } else {
+      setNoResults(false);
+    }
+    setSearchLoading(false);
   }, [searchInput]);
+
+  const debounce = (callback: Function, delay = 500) => {
+    let timeout: NodeJS.Timeout;
+    return (...args: any) => {
+      clearTimeout(timeout);
+      setSearchLoading(true);
+      timeout = setTimeout(() => {
+        callback(...args);
+      }, delay);
+    };
+  };
+
+  const updateDebounceText = debounce((text: string) => {
+    setSearchInput(text);
+  });
+
   return (
     <Box>
       <Flex pos='relative' alignItems='center'>
@@ -43,7 +70,8 @@ const Search: React.FC<SearchProps> = ({ setSearchResults }) => {
           size='lg'
           bgColor='whiteAlpha.600'
           borderColor='Brand.Penn'
-          onChange={(e) => setSearchInput(e.target.value)}
+          onChange={(e) => updateDebounceText(e.target.value)}
+          placeholder='County name'
         />
 
         <Icon
