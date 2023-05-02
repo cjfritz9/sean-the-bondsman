@@ -25,7 +25,7 @@ const Search: React.FC<SearchProps> = ({
   const [searchInput, setSearchInput] = useState('');
 
   useEffect(() => {
-    setSearchLoading(true)
+    setSearchLoading(true);
     if (searchInput.length === 0 || searchInput.charAt(0) === ' ') {
       setSearchResults([]);
       setSearchLoading(false);
@@ -64,7 +64,7 @@ const Search: React.FC<SearchProps> = ({
     <Box>
       <Flex pos='relative' alignItems='center'>
         <Input
-          w='400px'
+          w={['320px', '400px']}
           _hover={{ borderColor: 'Brand.Celestial' }}
           _focus={{ bgColor: 'Brand.White' }}
           size='lg'

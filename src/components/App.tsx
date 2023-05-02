@@ -33,8 +33,6 @@ const App: React.FC = () => {
     setIsGreaterThan768(isGreaterThan768);
   }, [isGreaterThan768]);
 
-  console.log(isGreaterThan768, bgImage);
-
   return (
     <Box
       minH='100dvh'

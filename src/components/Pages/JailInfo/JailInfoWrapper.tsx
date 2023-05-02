@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Flex, Heading, Icon, Input, Spinner, Stack } from '@chakra-ui/react';
 import { jails1, jails2, jails3, jails4, JailData } from './JailData';
 import JailInfoCard from './JailInfoCard';
 import Search from './Search';
+import { SiteContext } from '../../../context/SiteContext';
 
 const JailInfoWrapper: React.FC = () => {
   const [searchResults, setSearchResults] = useState<JailData[]>([]);
   const [searchLoading, setSearchLoading] = useState(false);
   const [noResults, setNoResults] = useState(false);
+  const { isGreaterThan768 } = useContext<any>(SiteContext);
   return (
     <Stack
       py={['2rem', '3rem', '6rem']}
@@ -21,7 +23,12 @@ const JailInfoWrapper: React.FC = () => {
         setSearchLoading={setSearchLoading}
         setNoResults={setNoResults}
       />
-      <Flex w='100%' gap='2rem' justifyContent='center'>
+      <Flex
+        flexWrap='wrap'
+        w='100%'
+        gap={isGreaterThan768 ? '2rem' : '0'}
+        justifyContent='center'
+      >
         {noResults ? (
           <Heading>No Results</Heading>
         ) : searchResults.length ? (

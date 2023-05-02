@@ -38,7 +38,7 @@ const JailInfoCard: React.FC<JailInfoCardProps> = ({
       }, 5000);
       navigator.clipboard.writeText(phone);
     } else {
-      window.open(phone);
+      window.open('tel:' + phone);
     }
   };
 

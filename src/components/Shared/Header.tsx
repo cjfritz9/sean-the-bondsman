@@ -11,7 +11,7 @@ import {
   Text,
   Image
 } from '@chakra-ui/react';
-import { Link as ReactLink, useLocation } from 'react-router-dom';
+import { Link as ReactLink, useLocation, useNavigate } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
 import { BsInfoSquare, BsChevronUp } from 'react-icons/bs';
 import { FaWpforms } from 'react-icons/fa';
@@ -20,11 +20,17 @@ import logoSM from '../../assets/logo-sm.webp';
 import { SiteContext } from '../../context/SiteContext';
 
 const Header: React.FC = () => {
-  const menuRef = useRef(null);
   const { isGreaterThan768, isMenuOpen, setIsMenuOpen } =
     useContext<any>(SiteContext);
 
+  const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  }, [navigate]);
 
   if (isGreaterThan768) {
     return (
