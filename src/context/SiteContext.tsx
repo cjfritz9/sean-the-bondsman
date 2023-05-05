@@ -38,8 +38,8 @@ export class SiteProvider extends React.Component {
       pageTitle = 'Contact Us';
     }
 
-    if (pathname === '/faq') {
-      pageTitle = 'Frequently Asked Questions';
+    if (pathname === '/payment') {
+      pageTitle = 'Payment Portal';
     }
 
     if (pathname === '/privacy') {

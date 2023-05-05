@@ -10,7 +10,7 @@ import FormsAndInfoPage from './Pages/FormsAndInfoPage';
 import JailInfoPage from './Pages/JailInfoPage';
 import ApexMonitoringPage from './Pages/ApexMonitoringPage';
 import ContactUsPage from './Pages/ContactUsPage';
-import FAQPage from './Pages/FAQPage';
+import PaymentPage from './Pages/PaymentPage';
 import Announcement from './Shared/Announcement';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 
@@ -49,7 +49,7 @@ const App: React.FC = () => {
           : mobileAltBg
       }
       bgAttachment='fixed'
-      fontFamily='ABeeZee'
+      fontFamily='Poppins'
       bgPosition='center'
     >
       {/* {isGreaterThan768 && <Cursor />} */}
@@ -64,10 +64,9 @@ const App: React.FC = () => {
         <Route path='/apex' element={<ApexMonitoringPage />} />
         <Route path='/about-us' element={<AboutUsPage />} />
         <Route path='/contact-us' element={<ContactUsPage />} />
-        <Route path='/faq' element={<FAQPage />} />
+        <Route path='/payment' element={<PaymentPage />} />
         <Route path='/privacy' element={<PrivacyPolicyPage />} />
       </Routes>
-      {/* <Ankle /> */}
       <Footer />
     </Box>
   );

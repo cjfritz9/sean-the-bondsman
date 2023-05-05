@@ -92,7 +92,7 @@ const Information: React.FC = () => {
               color='white'
               fontSize={['12px', '14px', '14px', '16px']}
             >
-              Sean Says: "I know you think of a bondsman as someone who gets
+              Sean says, "I know you think of a bondsman as someone who gets
               people out of jail. What I really do is, sort of, switch the
               custody of the defendant from the jail, to my company, Sean the
               Bondsman. As long as they are in our “custody” they have to attend

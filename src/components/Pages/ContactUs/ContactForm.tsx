@@ -78,7 +78,7 @@ const ContactForm: React.FC = () => {
     <Flex
       w='100%'
       justifyContent='center'
-      bgColor='Brand.Celestial'
+      bgColor='#00BBFF'
       py={['2rem', '3rem', '6rem']}
       px='1rem'
     >
@@ -109,6 +109,7 @@ const ContactForm: React.FC = () => {
                   bgColor='Brand.White'
                   color='Brand.Persian'
                   placeholder='Your Name'
+                  type='text'
                 />
                 <Input
                   _placeholder={{ color: '#555555' }}
@@ -116,6 +117,7 @@ const ContactForm: React.FC = () => {
                   bgColor='Brand.White'
                   color='Brand.Persian'
                   placeholder='Phone Number'
+                  type='tel'
                 />
                 <Input
                   _placeholder={{ color: '#555555' }}
@@ -123,6 +125,7 @@ const ContactForm: React.FC = () => {
                   bgColor='Brand.White'
                   color='Brand.Persian'
                   placeholder='Email'
+                  type='email'
                 />
               </Flex>
               <Textarea

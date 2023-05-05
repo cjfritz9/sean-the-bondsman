@@ -10,7 +10,7 @@ export const jails1 = [
     phone: '785-448-5428'
   },
   {
-    name: 'Atchison County Detention Center',
+    name: 'Atchison County',
     address: '518 Parallel Street, Atchison, KS 66002',
     phone: '913-367-8201'
   },

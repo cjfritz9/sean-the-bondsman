@@ -43,7 +43,7 @@ const Header: React.FC = () => {
         <Flex h='100%' alignItems='center' justify='space-between'>
           <Flex as={ReactLink} to='/' gap='1rem' h='100%' alignItems='center'>
             <Image src={logoSM} h='72px' />
-            <Heading fontSize='24px' color='Brand.French' fontFamily='Heebo'>
+            <Heading fontSize='24px' color='Brand.French' fontFamily='Kanit'>
               Topeka Bail Bonds
             </Heading>
           </Flex>
@@ -106,13 +106,13 @@ const Header: React.FC = () => {
             <Link
               as={ReactLink}
               variant={
-                location.pathname === '/faq'
+                location.pathname === '/payment'
                   ? 'headerLinkSelected'
                   : 'headerLink'
               }
-              to='/faq'
+              to='/payment'
             >
-              FAQ
+              Payments
             </Link>
           </Flex>
         </Flex>

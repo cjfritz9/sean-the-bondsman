@@ -5,7 +5,7 @@ export const baseButton = defineStyle({
   paddingY: '1.75rem',
   borderRadius: '5px',
   bgColor: 'Brand.French',
-  fontFamily: 'ABeeZee',
+  fontFamily: 'Poppins',
   fontWeight: 'bold',
   fontSize: '20px',
   _hover: {
@@ -14,9 +14,9 @@ export const baseButton = defineStyle({
   _active: {
     transform: 'scale(.98)'
   }
-})
+});
 
 export const altButton = defineStyle({
   color: 'Brand.White',
   bgColor: 'Brand.Celestial'
-})
+});

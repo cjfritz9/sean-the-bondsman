@@ -62,7 +62,7 @@ const JailInfoCard: React.FC<JailInfoCardProps> = ({
             </AccordionButton>
             <AccordionPanel
               p='0'
-              bgColor='#49B6FA'
+              bgColor='#E7E7E7'
               borderRadius='0px 0px 5px 5px'
             >
               <Stack>

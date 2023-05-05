@@ -9,15 +9,15 @@ const BailBondInfo: React.FC = () => {
     <Stack
       w='100dvw'
       px={['1rem', '1rem', '2rem', '4rem', '8rem', '14rem']}
-      py='2rem'
+      py='4rem'
       alignItems='center'
-      bgColor='Brand.Rose'
+      bgColor='Brand.Celestial'
     >
       <Heading
         size='xl'
         color='black'
         textAlign='center'
-        fontFamily='heebo'
+        fontFamily='Kanit'
         mb='2.5rem'
       >
         ABOUT BAIL BONDS
@@ -30,10 +30,10 @@ const BailBondInfo: React.FC = () => {
         gap={isGreaterThan768 ? '0rem' : '1rem'}
       >
         <Stack
-          h={isGreaterThan768 ? '744px' : undefined}
+          h={isGreaterThan768 ? '768px' : undefined}
           w={['336px', '480px']}
           mx='1rem'
-          justifyContent='center'
+          justifyContent='start'
           bgColor='Brand.White'
           px='2.5rem'
           py='1.5rem'

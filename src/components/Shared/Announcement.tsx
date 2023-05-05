@@ -12,7 +12,7 @@ const Announcement: React.FC = () => {
     >
       <Tooltip label='This will link to DocuSign'>
         <Flex gap='.5rem' h='100%' alignItems='center' justifyContent='center'>
-          <Text fontFamily='heebo' fontWeight='bold'>
+          <Text fontFamily='Kanit' fontWeight='bold'>
             GET STARTED NOW
           </Text>
           <Icon as={BiLinkExternal} h='20px' w='20px' />

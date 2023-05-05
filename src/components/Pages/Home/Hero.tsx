@@ -38,8 +38,8 @@ const Hero: React.FC = () => {
 
   return (
     <Box w='100%'>
-      <Stack h='720px' w='100%' zIndex={1} alignItems='center'>
-        <Heading w='100%' variant='heroText' mt={['8rem', '10rem', '14rem']}>
+      <Stack h='480px' w='100%' zIndex={1} alignItems='center' justifyContent='center'>
+        <Heading w='100%' variant='heroText'>
           CALL FOR FREE BOND ADVICE
         </Heading>
         <Heading w='100%' variant='heroSubtext'>
