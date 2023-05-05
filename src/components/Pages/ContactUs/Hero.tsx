@@ -16,15 +16,12 @@ const Hero: React.FC = () => {
         alignItems='center'
         justifyContent='center'
         bgImage={isGreaterThan768 ? contactHero : mobileHero}
-        
-      bgRepeat='no-repeat'
-      bgSize='cover'
+        bgRepeat='no-repeat'
+        bgSize='cover'
       >
-
-          <Heading w='100%' variant='heroText'>
-            CONTACT US
-          </Heading>
-     
+        <Heading w='100%' variant='heroText'>
+          CONTACT US
+        </Heading>
       </Stack>
     </Box>
   );

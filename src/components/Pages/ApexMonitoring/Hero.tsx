@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { Box, Heading, Stack } from '@chakra-ui/react';
 import { SiteContext } from '../../../context/SiteContext';
 
-import aboutHero from '../../../assets/about-hero.jpg';
-import mobileHero from '../../../assets/about-hero-mobile.jpg';
+import aboutHero from '../../../assets/apex-hero.jpg';
+import mobileHero from '../../../assets/apex-hero-mobile.jpg';
 
 const Hero: React.FC = () => {
   const { isGreaterThan768 } = useContext<any>(SiteContext);
@@ -20,11 +20,9 @@ const Hero: React.FC = () => {
         bgSize='cover'
         bgPos='center'
       >
-        {!isGreaterThan768 && (
-          <Heading w='100%' variant='heroText'>
-            ABOUT US
-          </Heading>
-        )}
+        <Heading w='100%' variant='heroText' textShadow='0 0 4px black'>
+          APEX MONITORING
+        </Heading>
       </Stack>
     </Box>
   );

@@ -248,14 +248,14 @@ const Header: React.FC = () => {
               <Link
                 as={ReactLink}
                 variant={
-                  location.pathname === '/faq'
+                  location.pathname === '/payment'
                     ? 'headerLinkSelected'
                     : 'headerLink'
                 }
-                to='/faq'
+                to='/payment'
                 fontSize='32px'
               >
-                FAQ
+                Payments
               </Link>
             </Stack>
           )}

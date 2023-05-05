@@ -9,14 +9,13 @@ import {
   Tooltip,
   useMediaQuery
 } from '@chakra-ui/react';
-import { useNavigate } from 'react-router';
 import { SiteContext } from '../../../context/SiteContext';
+
 import formsHero from '../../../assets/forms-hero.jpg';
+import mobileHero from '../../../assets/forms-hero-mobile.jpg';
 
 const Hero: React.FC = () => {
   const { isGreaterThan768 } = useContext<any>(SiteContext);
-
-  const navigate = useNavigate();
 
   const handleNavigate = () => {
     window.open(
@@ -26,24 +25,26 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <Box w='100%' bgImage={formsHero}>
-      <Stack
-        h='480px'
-        w='100%'
-        zIndex={1}
-        alignItems='center'
-        justifyContent='center'
-      >
-        <Heading w='100%' variant='heroText'>
-          FORMS & INFORMATION
-        </Heading>
-        <Flex pt='6rem' gap={['1rem', '2rem']}>
-          <Button variant='altButton' onClick={handleNavigate}>
-            START NOW
-          </Button>
-        </Flex>
-      </Stack>
-    </Box>
+    <Stack
+      h='480px'
+      w='100%'
+      zIndex={1}
+      alignItems='center'
+      justifyContent='center'
+      bgImage={isGreaterThan768 ? formsHero : mobileHero}
+      bgRepeat='no-repeat'
+      bgSize='cover'
+      bgPos='center'
+    >
+      <Heading w='100%' variant='heroText'>
+        FORMS & INFORMATION
+      </Heading>
+      <Flex pt='6rem' gap={['1rem', '2rem']}>
+        <Button variant='altButton' onClick={handleNavigate}>
+          START NOW
+        </Button>
+      </Flex>
+    </Stack>
   );
 };
 
