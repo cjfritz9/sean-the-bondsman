@@ -52,6 +52,8 @@ const App: React.FC = () => {
       bgAttachment='fixed'
       fontFamily='Poppins'
       bgPosition='center'
+      bgRepeat='no-repeat'
+      bgSize='cover'
     >
       {/* {isGreaterThan768 && <Cursor />} */}
       <Header />

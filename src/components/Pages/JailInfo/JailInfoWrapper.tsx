@@ -27,7 +27,7 @@ const JailInfoWrapper: React.FC = () => {
       <Flex
         flexWrap='wrap'
         w='100%'
-        gap={isGreaterThan768 ? '2rem' : '0'}
+        gap={isGreaterThan768 ? '.5rem' : '0'}
         justifyContent='center'
       >
         {noResults ? (

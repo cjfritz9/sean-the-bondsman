@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
         justifyContent='center'
       >
         <Heading w='100%' variant='heroText'>
-          FORMS AND INFORMATION
+          FORMS & INFORMATION
         </Heading>
         <Flex pt='6rem' gap={['1rem', '2rem']}>
           <Button variant='altButton' onClick={handleNavigate}>

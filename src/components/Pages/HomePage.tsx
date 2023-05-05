@@ -25,9 +25,9 @@ const HomePage: React.FC = () => {
       <HowWeHelp />
       <GetStartedBanner />
       <BailBondInfo />
+      <Resources altImgRef={altImgRef} />
       {isGreaterThan768 && <CoverageBanner />}
       <Map />
-      <Resources altImgRef={altImgRef} />
     </Box>
   );
 };

@@ -38,16 +38,24 @@ const Header: React.FC = () => {
         w='100%'
         h='80px'
         bgColor='Brand.Penn'
-        px={['1rem', '1rem', '2rem', '4rem', '8rem', '14rem']}
+        px={['1rem', '1rem', '2rem', '3rem', '6rem', '14rem']}
       >
-        <Flex h='100%' alignItems='center' justify='space-between'>
+        <Flex h='100%' gap='1rem' alignItems='center' justify='space-between'>
           <Flex as={ReactLink} to='/' gap='1rem' h='100%' alignItems='center'>
             <Image src={logoSM} h='72px' />
-            <Heading fontSize='24px' color='Brand.French' fontFamily='Kanit'>
+            <Heading
+              display={['none', 'none', 'none', 'block']}
+              fontSize={['24px', '24px', '20px', '20px', '24px']}
+              color='Brand.French'
+              fontFamily='Kanit'
+            >
               Topeka Bail Bonds
             </Heading>
           </Flex>
-          <Flex gap='2rem'>
+          <Flex
+            gap={['1rem', '1rem', '1rem', '1rem', '2rem']}
+            textAlign='center'
+          >
             <Link
               as={ReactLink}
               variant={

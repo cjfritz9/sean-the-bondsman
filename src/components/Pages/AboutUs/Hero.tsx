@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { Box, Heading, Stack } from '@chakra-ui/react';
 import { SiteContext } from '../../../context/SiteContext';
 
-import jailsHero from '../../../assets/jails-hero.jpg';
-import mobileHero from '../../../assets/jails-hero-mobile.jpg';
+import aboutHero from '../../../assets/about-hero.jpg';
+import mobileHero from '../../../assets/about-hero-mobile.jpg';
 
 const Hero: React.FC = () => {
   const { isGreaterThan768 } = useContext<any>(SiteContext);
@@ -15,14 +15,13 @@ const Hero: React.FC = () => {
         zIndex={1}
         alignItems='center'
         justifyContent='center'
-        bgImage={isGreaterThan768 ? jailsHero : mobileHero}
-        
-        bgRepeat='no-repeat'
-        bgSize='cover'
+        bgImage={isGreaterThan768 ? aboutHero : mobileHero}
       >
-        <Heading w='100%' variant='heroText'>
-          KANSAS JAILS INFORMATION
-        </Heading>
+        {!isGreaterThan768 && (
+          <Heading w='100%' variant='heroText'>
+            ONLINE PAYMENTS
+          </Heading>
+        )}
       </Stack>
     </Box>
   );
