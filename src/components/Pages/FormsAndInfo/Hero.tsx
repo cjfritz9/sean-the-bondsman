@@ -1,13 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import {
-  Box,
   Button,
   Flex,
   Heading,
-  Image,
-  Stack,
-  Tooltip,
-  useMediaQuery
+  Stack
 } from '@chakra-ui/react';
 import { SiteContext } from '../../../context/SiteContext';
 

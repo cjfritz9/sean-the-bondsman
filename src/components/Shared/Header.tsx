@@ -1,20 +1,14 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
   Box,
-  Divider,
   Flex,
   Heading,
   Icon,
   Link,
   Stack,
-  useMediaQuery,
-  Text,
   Image
 } from '@chakra-ui/react';
 import { Link as ReactLink, useLocation, useNavigate } from 'react-router-dom';
-import { AiFillHome } from 'react-icons/ai';
-import { BsInfoSquare, BsChevronUp } from 'react-icons/bs';
-import { FaWpforms } from 'react-icons/fa';
 import { MdMenu, MdClose } from 'react-icons/md';
 import logoSM from '../../assets/logo-sm.webp';
 import { SiteContext } from '../../context/SiteContext';

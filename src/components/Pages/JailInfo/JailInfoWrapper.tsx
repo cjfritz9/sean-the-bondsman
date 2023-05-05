@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Flex, Heading, Icon, Input, Spinner, Stack } from '@chakra-ui/react';
+import { Flex, Heading, Stack } from '@chakra-ui/react';
 import { jails1, jails2, jails3, jails4, JailData } from './JailData';
 import JailInfoCard from './JailInfoCard';
 import Search from './Search';

@@ -1,14 +1,12 @@
-import React, { SyntheticEvent, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Flex,
   Icon,
-  Input,
-  InputGroup,
-  InputRightAddon
+  Input
 } from '@chakra-ui/react';
 import { GrSearch } from 'react-icons/gr';
-import { JailData, jails1, jails2, jails3, jails4 } from './JailData';
+import { jails1, jails2, jails3, jails4 } from './JailData';
 
 interface SearchProps {
   setSearchResults: (results: any) => void;

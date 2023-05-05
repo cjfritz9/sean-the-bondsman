@@ -4,10 +4,8 @@ import {
   Button,
   Flex,
   Heading,
-  Image,
   Stack,
-  Tooltip,
-  useMediaQuery
+  Tooltip
 } from '@chakra-ui/react';
 import HeroImage from '../../../assets/topeka-capital-building.jpg';
 import CuffsOff from '../../../assets/handcuffs-off.jpg';

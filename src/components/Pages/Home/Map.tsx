@@ -1,5 +1,5 @@
-import React, { MutableRefObject, Ref, useState } from 'react';
-import { Box, Heading, Stack, Tooltip } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Box, Heading, Stack } from '@chakra-ui/react';
 
 const Map: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);

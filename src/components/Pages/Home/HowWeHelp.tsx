@@ -4,8 +4,7 @@ import {
   Flex,
   Heading,
   Stack,
-  Text,
-  useMediaQuery
+  Text
 } from '@chakra-ui/react';
 import { SiteContext } from '../../../context/SiteContext';
 

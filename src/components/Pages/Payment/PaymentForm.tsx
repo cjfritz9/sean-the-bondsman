@@ -12,8 +12,7 @@ import {
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton,
-  useDisclosure
+  ModalCloseButton
 } from '@chakra-ui/react';
 import { SiteContext } from '../../../context/SiteContext';
 
