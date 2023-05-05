@@ -67,7 +67,7 @@ const Resources: React.FC<ResourcesProps> = ({altImgRef}) => {
               transition='color .3s ease'
             />
             <Text
-              w={['110px', '110px', '200px']}
+              w={['110px', '110px', '224px']}
               color='white'
               textAlign='center'
               fontSize={isHovered === 1 ? '24px' : ['16px', '18px', '20px']}
@@ -94,7 +94,7 @@ const Resources: React.FC<ResourcesProps> = ({altImgRef}) => {
               transition='color .3s ease'
             />
             <Text
-              w={['110px', '110px', '200px']}
+              w={['110px', '110px', '224px']}
               color='white'
               textAlign='center'
               fontSize={isHovered === 2 ? '24px' : ['16px', '18px', '20px']}
@@ -121,7 +121,7 @@ const Resources: React.FC<ResourcesProps> = ({altImgRef}) => {
               transition='color .3s ease'
             />
             <Text
-              w={['110px', '110px', '200px']}
+              w={['110px', '110px', '224px']}
               color='white'
               textAlign='center'
               fontSize={isHovered === 3 ? '24px' : ['16px', '18px', '20px']}
@@ -148,7 +148,7 @@ const Resources: React.FC<ResourcesProps> = ({altImgRef}) => {
               transition='color .3s ease'
             />
             <Text
-              w={['110px', '110px', '200px']}
+              w={['110px', '110px', '224px']}
               color='white'
               textAlign='center'
               fontSize={isHovered === 4 ? '24px' : ['16px', '18px', '20px']}

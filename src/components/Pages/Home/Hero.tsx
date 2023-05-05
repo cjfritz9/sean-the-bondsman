@@ -58,14 +58,6 @@ const Hero: React.FC = () => {
           </Button>
         </Flex>
       </Stack>
-      {/* <Image
-        h='100dvh'
-        w='100%'
-        src={CuffsOff}
-        objectFit='cover'
-        objectPosition='center center'
-        filter='brightness(.25)'
-      /> */}
     </Box>
   );
 };

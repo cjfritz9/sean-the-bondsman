@@ -18,6 +18,7 @@ import backgroundImage from '../assets/handcuffs-off.jpg';
 import mobileBg from '../assets/handcuffs-off-mobile.jpg';
 import alternateBg from '../assets/topeka-capital-building.jpg';
 import mobileAltBg from '../assets/topeka-capital-building-mobile.jpg';
+import PaymentSuccessPage from './Pages/PaymentSuccessPage';
 
 const App: React.FC = () => {
   const [isGreaterThan768] = useMediaQuery(['(min-width: 768px)']);
@@ -65,6 +66,7 @@ const App: React.FC = () => {
         <Route path='/about-us' element={<AboutUsPage />} />
         <Route path='/contact-us' element={<ContactUsPage />} />
         <Route path='/payment' element={<PaymentPage />} />
+        <Route path='/payment-success' element={<PaymentSuccessPage />} />
         <Route path='/privacy' element={<PrivacyPolicyPage />} />
       </Routes>
       <Footer />

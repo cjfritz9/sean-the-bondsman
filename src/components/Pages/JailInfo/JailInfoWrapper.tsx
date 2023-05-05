@@ -12,8 +12,9 @@ const JailInfoWrapper: React.FC = () => {
   const { isGreaterThan768 } = useContext<any>(SiteContext);
   return (
     <Stack
-      py={['2rem', '3rem', '6rem']}
-      w='100%'
+      minH='840px'
+    w='100%'
+    py={['2rem', '3rem', '6rem']}
       alignItems='center'
       bgColor='Brand.French'
       gap='2rem'

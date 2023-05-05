@@ -70,8 +70,8 @@ const Search: React.FC<SearchProps> = ({
           size='lg'
           bgColor='whiteAlpha.600'
           borderColor='Brand.Penn'
-          onChange={(e) => updateDebounceText(e.target.value)}
           placeholder='County name'
+          onChange={(e) => updateDebounceText(e.target.value)}
         />
 
         <Icon
