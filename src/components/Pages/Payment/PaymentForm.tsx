@@ -12,7 +12,9 @@ import {
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton
+  ModalCloseButton,
+  OrderedList,
+  ListItem
 } from '@chakra-ui/react';
 import { SiteContext } from '../../../context/SiteContext';
 
@@ -47,19 +49,61 @@ const PaymentForm: React.FC = () => {
     <Stack w='100%' alignItems='center' bgColor='Brand.Celestial' py='6rem'>
       <Modal isOpen={showTos} onClose={() => setShowTos(false)}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxH='80%'>
           <ModalHeader>Terms of Service</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-              quam natus voluptatem cupiditate deserunt voluptate qui iste,
-              amet, voluptatibus molestiae mollitia ratione expedita eligendi
-              nulla obcaecati commodi temporibus aspernatur provident? Aliquam
-              dicta illum voluptates enim ad praesentium aliquid ipsa quo minus
-              nam consequatur, asperiores nulla perspiciatis cupiditate
-              excepturi est incidunt, voluptatibus, optio sequi consequuntur!
-              Voluptas inventore tenetur tempore deleniti sint?
+          <ModalBody overflowY='scroll'>
+            <Text mb='.5rem'>
+              Before using our online payment system, please carefully read and
+              agree to the following terms and conditions:
+            </Text>
+            <OrderedList>
+              <ListItem>
+                Payment Amounts: Payment amounts must be discussed and arranged
+                beforehand via Stripe, our secure online payment platform. We
+                accept all major credit cards through Stripe. Payment amounts
+                must be agreed upon by both parties before any payments are
+                processed.
+              </ListItem>
+              <ListItem>
+                Payment Processing: Once a payment amount has been agreed upon,
+                the payment will be processed through Stripe. Please note that
+                we do not store any credit card information on our servers.
+                Stripe is a third-party payment processor that uses
+                industry-leading security measures to ensure that your payment
+                information is kept secure.
+              </ListItem>
+              <ListItem>
+                Refunds: Refunds will be issued at the discretion of
+                Seanthebondsman.com. If a refund is issued, it will be processed
+                through Stripe and may take up to 5-7 business days to appear in
+                your account.
+              </ListItem>
+              <ListItem>
+                Payment Failure: If a payment is declined or fails for any
+                reason, you will be notified immediately via email. It is your
+                responsibility to ensure that the payment information you
+                provide is accurate and up-to-date.
+              </ListItem>
+              <ListItem>
+                Late Payments: If a payment is not received by the agreed-upon
+                due date, you may be subject to additional fees and/or legal
+                action.
+              </ListItem>
+              <ListItem>
+                Disputes: Any disputes regarding payments must be brought to our
+                attention within 30 days of the payment date.
+              </ListItem>
+              <ListItem>
+                Changes to Payment Terms: We reserve the right to modify these
+                payment terms at any time. Any changes will be posted on this
+                page and will be effective immediately upon posting.
+              </ListItem>
+            </OrderedList>
+            <Text mt='.5rem'>
+              By using our online payment system, you agree to the above terms
+              and conditions. If you have any questions or concerns, please
+              contact us at info.seanthebondsman@gmail.com.
             </Text>
           </ModalBody>
           <ModalFooter>

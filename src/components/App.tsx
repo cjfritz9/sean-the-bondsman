@@ -1,6 +1,6 @@
 import { Box, useMediaQuery } from '@chakra-ui/react';
 import { useContext, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router';
+import { Routes, Route, useLocation, useNavigate } from 'react-router';
 import { SiteContext } from '../context/SiteContext';
 import HomePage from './Pages/HomePage';
 import Header from './Shared/Header';
@@ -28,6 +28,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     document.title = updatePageTitle(location.pathname);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location]);
 
   useEffect(() => {

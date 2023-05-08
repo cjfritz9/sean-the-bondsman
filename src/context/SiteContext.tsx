@@ -42,6 +42,10 @@ export class SiteProvider extends React.Component {
       pageTitle = 'Payment Portal';
     }
 
+    if (pathname === '/payment-success') {
+      pageTitle = 'Payment Successful';
+    }
+
     if (pathname === '/privacy') {
       pageTitle = 'Privacy Policy';
     }
