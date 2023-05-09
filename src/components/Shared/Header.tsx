@@ -31,6 +31,7 @@ const Header: React.FC = () => {
             gap='1rem'
             h='100%'
             alignItems='center'
+            cursor='pointer'
             onClick={() => navigate('/')}
           >
             <Image src={logoSM} h='72px' w='110.5px' alt='Logo' />
@@ -133,6 +134,7 @@ const Header: React.FC = () => {
             gap='1rem'
             h='100%'
             alignItems='center'
+            cursor='pointer'
             onClick={() => navigate('/')}
           >
             <Image src={logoSM} h='72px' alt='Logo' />
