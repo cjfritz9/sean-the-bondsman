@@ -18,5 +18,5 @@ export const baseButton = defineStyle({
 
 export const altButton = defineStyle({
   color: 'Brand.White',
-  bgColor: 'Brand.Celestial'
+  bgColor: '#2A94F4'
 });

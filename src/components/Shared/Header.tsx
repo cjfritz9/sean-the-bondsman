@@ -27,8 +27,13 @@ const Header: React.FC = () => {
         px={['1rem', '1rem', '2rem', '3rem', '6rem', '14rem']}
       >
         <Flex h='100%' gap='1rem' alignItems='center' justify='space-between'>
-          <Flex as={ReactLink} to='/' gap='1rem' h='100%' alignItems='center'>
-            <Image src={logoSM} h='72px' w='110.5px' />
+          <Flex
+            gap='1rem'
+            h='100%'
+            alignItems='center'
+            onClick={() => navigate('/')}
+          >
+            <Image src={logoSM} h='72px' w='110.5px' alt='Logo' />
             <Heading
               display={['none', 'none', 'none', 'block']}
               fontSize={['24px', '24px', '20px', '20px', '24px']}
@@ -124,8 +129,13 @@ const Header: React.FC = () => {
         zIndex={5}
       >
         <Flex h='100%' alignItems='center' justify='space-between'>
-          <Flex as={ReactLink} to='/' gap='1rem' h='100%' alignItems='center'>
-            <Image src={logoSM} h='72px' />
+          <Flex
+            gap='1rem'
+            h='100%'
+            alignItems='center'
+            onClick={() => navigate('/')}
+          >
+            <Image src={logoSM} h='72px' alt='Logo' />
           </Flex>
           <Stack
             h='80px'
