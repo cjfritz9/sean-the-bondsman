@@ -58,10 +58,10 @@ const Hero: React.FC<HeroProps> = ({ variant }) => {
           alignItems='center'
           justifyContent='center'
         >
-          <Heading w='100%' variant='heroText'>
+          <Heading variant='heroText'>
             CALL FOR FREE BOND ADVICE
           </Heading>
-          <Heading w='100%' variant='heroSubtext'>
+          <Heading variant='heroSubtext'>
             (785) 969-2735
           </Heading>
           <Flex pt='6rem' gap={['1rem', '2rem']}>

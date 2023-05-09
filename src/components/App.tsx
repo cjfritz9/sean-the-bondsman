@@ -14,10 +14,10 @@ import PaymentPage from './Pages/PaymentPage';
 import Announcement from './Shared/Announcement';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 
-import backgroundImage from '../assets/handcuffs-off.jpg';
-import mobileBg from '../assets/handcuffs-off-mobile.jpg';
-import alternateBg from '../assets/topeka-capital-building.jpg';
-import mobileAltBg from '../assets/topeka-capital-building-mobile.jpg';
+import backgroundImage from '../assets/handcuffs-off.webp';
+import mobileBg from '../assets/handcuffs-off-mobile.webp';
+import alternateBg from '../assets/topeka-capital-building.webp';
+import mobileAltBg from '../assets/topeka-capital-building-mobile.webp';
 import PaymentSuccessPage from './Pages/PaymentSuccessPage';
 
 const App: React.FC = () => {
