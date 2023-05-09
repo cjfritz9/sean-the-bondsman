@@ -10,6 +10,13 @@
 
 ### ✨ [Demo](https://development-topekabailbonds.netlify.app)
 
+## Tech Stack
+
+* [Typescript](https://www.typescriptlang.org) - Primary Language
+* [React](https://react.dev) - Frontend Framework
+* [Chakra UI](https://chakra-ui.com/getting-started) - CSS Framework
+* [Framer Motion](https://chakra-ui.com/getting-started/with-framer) - Animations
+
 ## Install
 
 ```sh
@@ -26,7 +33,7 @@ npm run start
 
 👤 **C.J. Fritz**
 
-* Website: https://cjfritz.dev
+* Website: [cjfritz.dev](https://cjfritz.dev)
 * Github: [@cjfritz9](https://github.com/cjfritz9)
 * LinkedIn: [@cj-fritz](https://linkedin.com/in/cj-fritz)
 
