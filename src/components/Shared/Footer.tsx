@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Icon, Link } from '@chakra-ui/react';
+import { Box, Flex, Icon, Link, Text } from '@chakra-ui/react';
 import { BsFillCircleFill } from 'react-icons/bs';
 
 const Footer: React.FC = () => {
@@ -18,9 +18,9 @@ const Footer: React.FC = () => {
         color='Brand.White'
         fontSize={['12px','14px','16px']}
       >
-        <Link onClick={scrollToTop} textAlign='center'>
+        <Text _hover={{ textDecor: 'underline'}} cursor='pointer' onClick={scrollToTop} textAlign='center'>
           TOPEKA BAIL BONDS
-        </Link>
+        </Text>
         <Icon as={BsFillCircleFill} fontSize='5px' />
         <Link href='/privacy' textAlign='center'>
           PRIVACY POLICY
