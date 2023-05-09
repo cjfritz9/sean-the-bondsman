@@ -1,13 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import {
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  Link,
-  Stack,
-  Image
-} from '@chakra-ui/react';
+import { Box, Flex, Heading, Icon, Link, Stack, Image } from '@chakra-ui/react';
 import { Link as ReactLink, useLocation, useNavigate } from 'react-router-dom';
 import { MdMenu, MdClose } from 'react-icons/md';
 import logoSM from '../../assets/logo-sm.webp';
@@ -36,7 +28,7 @@ const Header: React.FC = () => {
       >
         <Flex h='100%' gap='1rem' alignItems='center' justify='space-between'>
           <Flex as={ReactLink} to='/' gap='1rem' h='100%' alignItems='center'>
-            <Image src={logoSM} h='72px' />
+            <Image src={logoSM} h='72px' w='110.5px' />
             <Heading
               display={['none', 'none', 'none', 'block']}
               fontSize={['24px', '24px', '20px', '20px', '24px']}

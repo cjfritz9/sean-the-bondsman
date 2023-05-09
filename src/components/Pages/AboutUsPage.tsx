@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Box }  from '@chakra-ui/react'
 import Hero from '../Shared/Hero';
 

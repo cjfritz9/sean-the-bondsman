@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Box, Flex, Icon, Text, Tooltip } from '@chakra-ui/react';
 import { BiLinkExternal } from 'react-icons/bi';
 

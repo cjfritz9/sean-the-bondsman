@@ -4,23 +4,23 @@ import { useNavigate } from 'react-router';
 import { SiteContext } from '../../context/SiteContext';
 import { HeroProps } from '../../models/Props';
 
-import formsHero from '../../assets/forms-hero.jpg';
-import formsMobile from '../../assets/forms-hero-mobile.jpg';
+import formsHero from '../../assets/forms-hero.webp';
+import formsMobile from '../../assets/forms-hero-mobile.webp';
 
-import aboutHero from '../../assets/about-hero.jpg';
-import aboutMobile from '../../assets/about-hero-mobile.jpg';
+import aboutHero from '../../assets/about-hero.webp';
+import aboutMobile from '../../assets/about-hero-mobile.webp';
 
-import jailsHero from '../../assets/jails-hero.jpg';
-import jailsMobile from '../../assets/jails-hero-mobile.jpg';
+import jailsHero from '../../assets/jails-hero.webp';
+import jailsMobile from '../../assets/jails-hero-mobile.webp';
 
-import apexHero from '../../assets/apex-hero.jpg';
-import apexMobile from '../../assets/apex-hero-mobile.jpg';
+import apexHero from '../../assets/apex-hero.webp';
+import apexMobile from '../../assets/apex-hero-mobile.webp';
 
-import contactHero from '../../assets/contact-hero.jpg';
-import contactMobile from '../../assets/contact-hero-mobile.jpg';
+import contactHero from '../../assets/contact-hero.webp';
+import contactMobile from '../../assets/contact-hero-mobile.webp';
 
-import paymentHero from '../../assets/payment-hero.jpg';
-import paymentMobile from '../../assets/payment-hero-mobile.jpg';
+import paymentHero from '../../assets/payment-hero.webp';
+import paymentMobile from '../../assets/payment-hero-mobile.webp';
 
 const Hero: React.FC<HeroProps> = ({ variant }) => {
   const [showCallTooltip, setShowCallTooltip] = useState(false);
