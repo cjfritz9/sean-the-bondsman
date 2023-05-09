@@ -17,7 +17,7 @@ const BailBondInfo: React.FC = () => {
         size='xl'
         color='black'
         textAlign='center'
-        fontFamily='Kanit'
+        fontFamily='Kanit, sans-serif'
         mb='2.5rem'
       >
         ABOUT BAIL BONDS

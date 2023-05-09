@@ -1,6 +1,6 @@
 import { Box, useMediaQuery } from '@chakra-ui/react';
 import { useContext, useEffect } from 'react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router';
+import { Routes, Route, useLocation } from 'react-router';
 import { SiteContext } from '../context/SiteContext';
 import HomePage from './Pages/HomePage';
 import Header from './Shared/Header';
@@ -51,15 +51,13 @@ const App: React.FC = () => {
           : mobileAltBg
       }
       bgAttachment='fixed'
-      fontFamily='Poppins'
+      fontFamily='Poppins, sans-serif'
       bgPosition='center'
       bgRepeat='no-repeat'
       bgSize='cover'
     >
-      {/* {isGreaterThan768 && <Cursor />} */}
       <Header />
       <Announcement />
-      {/* {isLoading && <Loading />} */}
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/about-us' element={<AboutUsPage />} />

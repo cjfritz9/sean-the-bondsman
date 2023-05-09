@@ -33,7 +33,7 @@ const Header: React.FC = () => {
               display={['none', 'none', 'none', 'block']}
               fontSize={['24px', '24px', '20px', '20px', '24px']}
               color='Brand.French'
-              fontFamily='Kanit'
+              fontFamily='Kanit, sans-serif'
             >
               Topeka Bail Bonds
             </Heading>

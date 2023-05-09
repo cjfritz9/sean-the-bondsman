@@ -19,7 +19,7 @@ const Announcement: React.FC = () => {
             alignItems='center'
             justifyContent='center'
           >
-            <Text fontFamily='Kanit' fontWeight='bold'>
+            <Text fontFamily='Kanit, sans-serif' fontWeight='bold'>
               GET STARTED NOW
             </Text>
             <Icon as={BiLinkExternal} h='20px' w='20px' />

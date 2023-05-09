@@ -83,7 +83,7 @@ const ContactForm: React.FC = () => {
       px='1rem'
     >
       <Stack w={['100%', '480px', '720px']} gap='2rem' alignItems='center'>
-        <Heading variant='iwtTitle' fontFamily='Poppins' textAlign='center'>
+        <Heading variant='iwtTitle' fontFamily='Poppins, sans-serif' textAlign='center'>
           Get In Touch
         </Heading>
         <Text>
@@ -100,7 +100,7 @@ const ContactForm: React.FC = () => {
         )}
         <Divider />
         <FormControl>
-          <Stack gap='1rem' fontFamily='Poppins' color='Brand.Penn'>
+          <Stack gap='1rem' fontFamily='Poppins, sans-serif' color='Brand.Penn'>
             <Stack gap='.5rem' onClick={() => setMessage('')}>
               <Flex gap='1.5rem' direction={['column', 'row']}>
                 <Input
@@ -141,7 +141,7 @@ const ContactForm: React.FC = () => {
               direction={['column', 'row']}
               gap={['1rem', '0rem']}
               w='100%'
-              fontFamily='Poppins'
+              fontFamily='Poppins, sans-serif'
               justify={message.length ? 'space-between' : 'flex-end'}
             >
               <Text

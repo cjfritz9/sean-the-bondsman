@@ -5,7 +5,7 @@ export const baseButton = defineStyle({
   paddingY: '1.75rem',
   borderRadius: '5px',
   bgColor: 'Brand.French',
-  fontFamily: 'Poppins',
+  fontFamily: 'Poppins, sans-serif',
   fontWeight: 'bold',
   fontSize: '20px',
   _hover: {
