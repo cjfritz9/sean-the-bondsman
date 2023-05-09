@@ -1,12 +1,12 @@
 import React from 'react'
 import { Box }  from '@chakra-ui/react'
-import Hero from './ApexMonitoring/Hero';
+import Hero from '../Shared/Hero';
 import TextWithVideo from './ApexMonitoring/TextWithVideo';
 
 const ApexMonitoringPage: React.FC = () => {
   return (
     <Box>
-      <Hero />
+      <Hero variant='apex' />
       <TextWithVideo />
     </Box>
   );

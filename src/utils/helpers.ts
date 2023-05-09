@@ -1,14 +1,16 @@
+import { MailData } from '../models/Interfaces';
+
+/**
+ *
+ * @param MailData Contact fields
+ * @returns Status message
+ */
 export const validateMailForm = ({
   name,
   number,
   email,
   message
-}: {
-  name: string;
-  number: string;
-  email: string;
-  message: string;
-}) => {
+}: MailData) => {
   if (!name.length || !number.length || !email.length || !message.length) {
     return 'Please fill out the entire form';
   }

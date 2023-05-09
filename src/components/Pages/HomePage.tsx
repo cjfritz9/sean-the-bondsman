@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { Box } from '@chakra-ui/react';
-import Hero from './Home/Hero';
+import Hero from '../Shared/Hero';
 import HowWeHelp from './Home/HowWeHelp';
 import GetStartedBanner from './Home/GetStartedBanner';
 import BailBondInfo from './Home/BailBondInfo';
@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
 
   return (
     <Box>
-      <Hero />
+      <Hero variant='home' />
       <HowWeHelp />
       <GetStartedBanner />
       <BailBondInfo />

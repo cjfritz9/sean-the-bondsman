@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { Box }  from '@chakra-ui/react'
-import Hero from './AboutUs/Hero';
+import Hero from '../Shared/Hero';
 
 const AboutUsPage: React.FC = () => {
 
   return (
     <Box>
-      <Hero />
+      <Hero variant='about' />
     </Box>
   );
 }

@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { MailData } from '../models/Interfaces';
 const BASE_URL = 'https://mail-server-379822.uc.r.appspot.com';
 
-const sendMail = async (data: object) => {
+const sendMail = async (data: MailData) => {
   const response = await axios.post(`${BASE_URL}/seanthebondsman/send`, data);
 
   if (response.data.success) {
