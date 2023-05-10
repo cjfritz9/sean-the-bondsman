@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         fontSize={['12px','14px','16px']}
       >
         <Text _hover={{ textDecor: 'underline'}} cursor='pointer' onClick={scrollToTop} textAlign='center'>
-          TOPEKA BAIL BONDS
+          SEAN THE BONDSMAN
         </Text>
         <Icon as={BsFillCircleFill} fontSize='5px' />
         <Link href='/privacy' textAlign='center'>

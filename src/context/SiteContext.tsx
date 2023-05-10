@@ -11,11 +11,11 @@ export class SiteProvider extends React.Component {
   };
 
   updatePageTitle = (pathname: string) => {
-    const baseTitle = ' | Topeka Bail Bonds';
+    const baseTitle = ' | Sean the Bondsman';
     let pageTitle = '';
 
     if (pathname === '/') {
-      return 'Topeka Bail Bonds | Kansas Multiple County Bail Assistance | Sean The Bondsman';
+      return 'Sean the Bondsman | Topeka Bail Bonds | Kansas Multiple County Bail Assistance';
     }
 
     if (pathname === '/forms-and-info') {

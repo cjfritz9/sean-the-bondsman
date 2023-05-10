@@ -8,7 +8,7 @@ const PrivacyPolicyPage: React.FC = () => {
         <Stack maxW='800px' gap='1rem'>
           <Heading textAlign='center'>Privacy Policy</Heading>
           <Text>
-            BailBondsTopeka is committed to protecting the privacy of its users.
+            Sean the Bondsman is committed to protecting the privacy of its users.
             This Privacy Policy explains the type of information we collect and
             how we use, share, and protect that information.
           </Text>
@@ -59,7 +59,7 @@ const PrivacyPolicyPage: React.FC = () => {
           <Text fontWeight='bold'>Third-Party Links</Text>
           <Text>
             Our website may contain links to other websites that are not owned
-            or controlled by BailBondsTopeka. We are not responsible for the
+            or controlled by Sean the Bondsman. We are not responsible for the
             privacy practices of these websites.
           </Text>
           <Text fontWeight='bold'>Changes to this Privacy Policy</Text>

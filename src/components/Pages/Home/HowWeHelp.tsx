@@ -1,11 +1,5 @@
 import React, { useContext } from 'react';
-import {
-  Box,
-  Flex,
-  Heading,
-  Stack,
-  Text
-} from '@chakra-ui/react';
+import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import { SiteContext } from '../../../context/SiteContext';
 
 const HowWeHelp: React.FC = () => {
@@ -18,33 +12,18 @@ const HowWeHelp: React.FC = () => {
       py='4rem'
       bgColor='Brand.White'
     >
-      <Flex
-        as={isGreaterThan768 ? Flex : Stack}
-        alignItems='center'
-        justifyContent='center'
-        gap={['2rem', '4rem', '4rem', '8rem']}
-      >
+      <Stack w='100%' alignItems='center'>
         <Stack
-          minH={['240px', '360px']}
-          minW={['360px', '360px', '360px', '480px']}
-          alignItems='center'
+          maxW={['360px', '480px']}
+          gap='2rem'
           justifyContent='center'
-          bgColor='Brand.Rose'
-          borderRadius='4px'
+          textAlign='center'
+          alignItems='center'
         >
-          <Text>IMAGE/VIDEO PLACEHOLDER</Text>
-        </Stack>
-        <Stack maxW={['360px', '480px']} gap='2rem' justifyContent='center'>
-          <Heading
-            variant='iwtTitle'
-            textAlign={isGreaterThan768 ? 'left' : 'center'}
-          >
+          <Heading variant='iwtTitle' textAlign='center'>
             How We Can Help You Or Your Family
           </Heading>
-          <Text
-            letterSpacing='wider'
-            textAlign={isGreaterThan768 ? 'left' : 'center'}
-          >
+          <Text letterSpacing='wider'>
             We know this can be a stressful and confusing time. We will provide
             you with quick, reliable advice and affordable bail bonds. You can
             call us any time of day, so don't hesitate to contact us. We are
@@ -53,7 +32,7 @@ const HowWeHelp: React.FC = () => {
             rely on us in this hectic time.
           </Text>
         </Stack>
-      </Flex>
+      </Stack>
     </Box>
   );
 };

@@ -37,11 +37,7 @@ const BailBondInfo: React.FC = () => {
           bgColor='Brand.White'
           px='2.5rem'
           py='1.5rem'
-          borderRadius={[
-            '20px 20px 0px 0px',
-            '20px 0px 0px 20px',
-            '20px 0px 0px 20px'
-          ]}
+          borderRadius='8px'
           fontSize={['14px', '14px', '16px']}
           gap={['1rem', '1rem', '2rem']}
           textAlign={['center', 'center', 'left']}
@@ -73,14 +69,14 @@ const BailBondInfo: React.FC = () => {
           w={['336px', '480px']}
           mx='1rem'
           gap='1rem'
-          textAlign={['center', 'center', 'right']}
+          textAlign={['center', 'center', 'left']}
           fontSize={['14px', '14px', '16px']}
         >
           <Box
             bgColor='Brand.White'
             px='2.5rem'
             py='1.5rem'
-            borderRadius={['0px', '0px', '0px 20px 0px 0px']}
+            borderRadius='8px'
           >
             <Text letterSpacing='wide'>
               Municipal courts issue City Bonds that provide two options for
@@ -91,7 +87,12 @@ const BailBondInfo: React.FC = () => {
               amount to the bondsman.
             </Text>
           </Box>
-          <Box bgColor='Brand.White' px='2.5rem' py='1.5rem' borderRadius='0px'>
+          <Box
+            bgColor='Brand.White'
+            px='2.5rem'
+            py='1.5rem'
+            borderRadius='8px'
+          >
             <Text letterSpacing='wide'>
               The district court is responsible for granting County Bonds, which
               can be either cash or a surety amount. If you have been granted a
@@ -104,11 +105,7 @@ const BailBondInfo: React.FC = () => {
             bgColor='Brand.White'
             px='2.5rem'
             py='1.5rem'
-            borderRadius={[
-              '0px 0px 20px 20px',
-              '0px 0px 20px 20px',
-              '0px 0px 20px 0px'
-            ]}
+            borderRadius='8px'
           >
             <Text letterSpacing='wide'>
               An ORCD bond or Own Recognizance Cash Deposit bond involves paying

@@ -41,7 +41,7 @@ const Header: React.FC = () => {
               color='Brand.French'
               fontFamily='Kanit, sans-serif'
             >
-              Topeka Bail Bonds
+              Sean the Bondsman
             </Heading>
           </Flex>
           <Flex
