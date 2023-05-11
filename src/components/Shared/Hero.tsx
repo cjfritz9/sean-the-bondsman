@@ -59,7 +59,9 @@ const Hero: React.FC<HeroProps> = ({ variant }) => {
           justifyContent='center'
         >
           <Heading variant='heroText'>CALL FOR FREE BOND ADVICE</Heading>
-          <Heading variant='heroSubtext'>(785) 969-2735</Heading>
+          <Heading variant='heroSubtext' onClick={handleCall}>
+            (785) 969-2735
+          </Heading>
           <Flex pt='6rem' gap={['1rem', '2rem']}>
             {showCallTooltip ? (
               <Tooltip label='Phone Number Copied' closeOnClick={false}>
