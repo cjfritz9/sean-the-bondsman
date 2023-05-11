@@ -24,7 +24,7 @@ import paymentMobile from '../../assets/payment-hero-mobile.webp';
 
 const Hero: React.FC<HeroProps> = ({ variant }) => {
   const [showCallTooltip, setShowCallTooltip] = useState(false);
-  const { isGreaterThan768 } = useContext<any>(SiteContext);
+  const { isGreaterThan768, docusignLink } = useContext<any>(SiteContext);
 
   const navigate = useNavigate();
 
@@ -58,12 +58,8 @@ const Hero: React.FC<HeroProps> = ({ variant }) => {
           alignItems='center'
           justifyContent='center'
         >
-          <Heading variant='heroText'>
-            CALL FOR FREE BOND ADVICE
-          </Heading>
-          <Heading variant='heroSubtext'>
-            (785) 969-2735
-          </Heading>
+          <Heading variant='heroText'>CALL FOR FREE BOND ADVICE</Heading>
+          <Heading variant='heroSubtext'>(785) 969-2735</Heading>
           <Flex pt='6rem' gap={['1rem', '2rem']}>
             {showCallTooltip ? (
               <Tooltip label='Phone Number Copied' closeOnClick={false}>
@@ -100,11 +96,7 @@ const Hero: React.FC<HeroProps> = ({ variant }) => {
         <Flex pt='6rem' gap={['1rem', '2rem']}>
           <Button
             variant='altButton'
-            onClick={() =>
-              handleNavigate(
-                'https://www.docusign.com/products/electronic-signature/features/powerforms'
-              )
-            }
+            onClick={() => handleNavigate(docusignLink)}
           >
             START NOW
           </Button>

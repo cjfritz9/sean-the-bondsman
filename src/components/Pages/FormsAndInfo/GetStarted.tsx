@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Button, Flex, Heading, Stack, Text } from '@chakra-ui/react';
+import { SiteContext } from '../../../context/SiteContext';
 
 const GetStarted: React.FC = () => {
+  const { docusignLink } = useContext<any>(SiteContext);
+
+  const handleNav = () => {
+    window.open(docusignLink, '_blank');
+  };
   return (
     <Box px='1rem' py={['2rem', '3rem', '5rem']} bgColor='Brand.White'>
       <Stack
@@ -31,7 +37,12 @@ const GetStarted: React.FC = () => {
           </Text>
           <Flex gap='1rem'>
             <Button variant='altButton'>Call Now</Button>
-            <Button variant='altButton' bgColor='Brand.French' color='black'>
+            <Button
+              variant='altButton'
+              bgColor='Brand.French'
+              color='black'
+              onClick={handleNav}
+            >
               Go To Form
             </Button>
           </Flex>

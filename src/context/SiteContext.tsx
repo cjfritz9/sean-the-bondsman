@@ -7,7 +7,8 @@ export class SiteProvider extends React.Component {
     isMenuOpen: false,
     isLoading: false,
     isGreaterThan768: true,
-    bgImage: 'default'
+    bgImage: 'default',
+    docusignLink: 'https://www.docusign.com'
   };
 
   updatePageTitle = (pathname: string) => {
