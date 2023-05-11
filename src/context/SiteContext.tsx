@@ -7,8 +7,7 @@ export class SiteProvider extends React.Component {
     isMenuOpen: false,
     isLoading: false,
     isGreaterThan768: true,
-    bgImage: 'default',
-    docusignLink: 'https://www.docusign.com'
+    bgImage: 'default'
   };
 
   updatePageTitle = (pathname: string) => {
@@ -70,6 +69,8 @@ export class SiteProvider extends React.Component {
     this.setState({ isMenuOpen: bool });
   };
 
+  docusignLink =
+    'https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=fea12092-cab2-4427-ac7f-3894dea0afa6&env=na2&acct=494e8d4d-77d3-4cc5-b9a4-76ca1fbffdd0&v=2';
   render() {
     return (
       <SiteContext.Provider
@@ -79,7 +80,8 @@ export class SiteProvider extends React.Component {
           setIsLoading: this.setIsLoading,
           setIsGreaterThan768: this.setIsGreaterThan768,
           updatePageTitle: this.updatePageTitle,
-          updateBgImage: this.updateBgImage
+          updateBgImage: this.updateBgImage,
+          docusignLink: this.docusignLink
         }}
       >
         {
