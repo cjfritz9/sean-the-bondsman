@@ -68,7 +68,7 @@ const Information: React.FC = () => {
               guidelines regarding fees, advertising, and the handling of client
               funds. The fee charged by a bail bond company is usually
               non-refundable and represents the company's fee for posting the
-              bail bond. The bail bondsman will also require collateral, such as
+              bail bond. The bail bondsman may also require collateral, such as
               a house or car, to secure the bond. This is because if the
               defendant fails to appear in court, the bail bondsman is
               responsible for paying the full bail amount, and they will use the

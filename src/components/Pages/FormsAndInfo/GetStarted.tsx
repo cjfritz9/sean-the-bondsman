@@ -32,7 +32,7 @@ const GetStarted: React.FC = () => {
             has gone through the paperwork, he'll give you a call and he'll work
             to bail out your loved one. You'll make a payment through our
             payment portal. Working with Sean is easy and stress-free, because
-            he knows the ins and outs of doezens of jails across Kansas. Easily
+            he knows the ins and outs of dozens of jails across Kansas. Easily
             and quickly bail out your loved one from jail.
           </Text>
           <Flex gap='1rem'>
