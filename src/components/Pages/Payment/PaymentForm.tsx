@@ -46,7 +46,7 @@ const PaymentForm: React.FC = () => {
   };
 
   return (
-    <Stack w='100%' alignItems='center' bgColor='Brand.Celestial' py='6rem'>
+    <Stack w='100%' alignItems='center' bgColor='Brand.Celestial' py='6rem' px='1rem'>
       <Modal isOpen={showTos} onClose={() => setShowTos(false)}>
         <ModalOverlay />
         <ModalContent maxH='80%'>
