@@ -126,23 +126,29 @@ const Header: React.FC = () => {
         w='100%'
         h='80px'
         bgColor='Brand.Penn'
-        px={['1rem', '1rem', '2rem', '4rem', '8rem', '14rem']}
+        px={['1rem', '1rem', '2rem']}
         zIndex={5}
       >
         <Flex h='100%' alignItems='center' justify='space-between'>
           <Flex
+            pos='relative'
             gap='1rem'
             h='100%'
             alignItems='center'
             cursor='pointer'
             onClick={() => navigate('/')}
           >
-            <Image src={logoSM} h='72px' alt='Logo' />
+            <Heading
+              fontSize='24px'
+              color='Brand.French'
+              fontFamily='Kanit, sans-serif'
+            >
+              Sean the Bondsman
+            </Heading>
           </Flex>
           <Stack
             h='80px'
             w='40px'
-            pos='relative'
             alignItems='center'
             justifyContent='center'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -183,6 +189,16 @@ const Header: React.FC = () => {
               zIndex={5}
               boxShadow='0 3px 9px black'
             >
+              <Image
+                pos='absolute'
+                bottom={0}
+                left={0}
+                src={logoSM}
+                alt='Logo'
+                zIndex={-1}
+                filter='brightness(.3)'
+                transform='scaleX(-1)'
+              />
               <Link
                 as={ReactLink}
                 variant={
