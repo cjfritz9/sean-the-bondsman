@@ -22,7 +22,7 @@ import PaymentSuccessPage from './Pages/PaymentSuccessPage';
 
 const App: React.FC = () => {
   const [isGreaterThan768] = useMediaQuery(['(min-width: 768px)']);
-  const { updatePageTitle, setIsGreaterThan768, bgImage, showToast } =
+  const { updatePageTitle, setIsGreaterThan768, bgImage } =
     useContext<any>(SiteContext);
   const location = useLocation();
 

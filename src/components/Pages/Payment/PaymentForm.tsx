@@ -38,6 +38,7 @@ const PaymentForm: React.FC = () => {
       navigator.clipboard.writeText('7859692735');
       toastIdRef.current = toast({
         title: 'Phone Number Copied',
+        variant: 'top-accent',
         status: 'info',
         duration: 5000,
         isClosable: true
