@@ -1,5 +1,13 @@
-import React, { useContext, useState } from 'react';
-import { Box, Button, Flex, Heading, Stack, Tooltip } from '@chakra-ui/react';
+import React, { useContext, useRef, useState } from 'react';
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Stack,
+  Tooltip,
+  useToast
+} from '@chakra-ui/react';
 import { useNavigate } from 'react-router';
 import { SiteContext } from '../../context/SiteContext';
 import { HeroProps } from '../../models/Props';
@@ -23,18 +31,24 @@ import paymentHero from '../../assets/payment-hero.webp';
 import paymentMobile from '../../assets/payment-hero-mobile.webp';
 
 const Hero: React.FC<HeroProps> = ({ variant }) => {
-  const [showCallTooltip, setShowCallTooltip] = useState(false);
   const { isGreaterThan768, docusignLink } = useContext<any>(SiteContext);
 
   const navigate = useNavigate();
+  const toast = useToast();
+  const toastIdRef = useRef<any>();
 
   const handleCall = () => {
+    if (toastIdRef.current) {
+      toast.close(toastIdRef.current);
+    }
     if (isGreaterThan768) {
       navigator.clipboard.writeText('7859692735');
-      setShowCallTooltip(true);
-      setTimeout(() => {
-        setShowCallTooltip(false);
-      }, 2500);
+      toastIdRef.current = toast({
+        title: 'Phone Number Copied',
+        status: 'info',
+        duration: 5000,
+        isClosable: true
+      });
     } else {
       window.open('tel:7859692735');
     }
@@ -63,13 +77,7 @@ const Hero: React.FC<HeroProps> = ({ variant }) => {
             (785) 969-2735
           </Heading>
           <Flex pt='6rem' gap={['1rem', '2rem']}>
-            {showCallTooltip ? (
-              <Tooltip label='Phone Number Copied' closeOnClick={false}>
-                <Button onClick={handleCall}>CALL NOW</Button>
-              </Tooltip>
-            ) : (
-              <Button onClick={handleCall}>CALL NOW</Button>
-            )}
+            <Button onClick={handleCall}>CALL NOW</Button>
             <Button variant='altButton' onClick={handleContact}>
               CONTACT US
             </Button>

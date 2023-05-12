@@ -10,7 +10,7 @@ export const heroText = defineStyle({
 });
 
 export const heroSubtext = defineStyle({
-  pointerEvents: 'none',
+  cursor: 'pointer',
   letterSpacing: '2px',
   textAlign: 'center',
   fontSize: ['24px', '32px', '40px'],

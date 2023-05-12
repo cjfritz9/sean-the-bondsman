@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import {
   Stack,
   FormControl,
@@ -10,7 +10,8 @@ import {
   Spinner,
   Heading,
   Divider,
-  Tooltip
+  Tooltip,
+  useToast
 } from '@chakra-ui/react';
 import { validateMailForm } from '../../../utils/helpers';
 import sendMail from '../../../api/EmailAPI';
@@ -19,8 +20,10 @@ import { SiteContext } from '../../../context/SiteContext';
 const ContactForm: React.FC = () => {
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [showCallTooltip, setShowCallTooltip] = useState(false);
   const { isGreaterThan768 } = useContext<any>(SiteContext);
+
+  const toast = useToast();
+  const toastIdRef = useRef<any>();
 
   const handleSend = async () => {
     setIsLoading(true);
@@ -63,12 +66,17 @@ const ContactForm: React.FC = () => {
   };
 
   const handleCall = () => {
+    if (toastIdRef.current) {
+      toast.close(toastIdRef.current);
+    }
     if (isGreaterThan768) {
       navigator.clipboard.writeText('7859692735');
-      setShowCallTooltip(true);
-      setTimeout(() => {
-        setShowCallTooltip(false);
-      }, 2500);
+      toastIdRef.current = toast({
+        title: 'Phone Number Copied',
+        status: 'info',
+        duration: 5000,
+        isClosable: true
+      });
     } else {
       window.open('tel:7859692735');
     }
@@ -83,7 +91,11 @@ const ContactForm: React.FC = () => {
       px='1rem'
     >
       <Stack w={['100%', '480px', '720px']} gap='2rem' alignItems='center'>
-        <Heading variant='iwtTitle' fontFamily='Poppins, sans-serif' textAlign='center'>
+        <Heading
+          variant='iwtTitle'
+          fontFamily='Poppins, sans-serif'
+          textAlign='center'
+        >
           Get In Touch
         </Heading>
         <Text>
@@ -91,13 +103,7 @@ const ContactForm: React.FC = () => {
           help you ASAP. For any other general inquiries you can fill the form
           out below.
         </Text>
-        {showCallTooltip ? (
-          <Tooltip label='Phone Number Copied' closeOnClick={false}>
-            <Button onClick={handleCall}>CALL NOW</Button>
-          </Tooltip>
-        ) : (
-          <Button onClick={handleCall}>CALL NOW</Button>
-        )}
+        <Button onClick={handleCall}>CALL NOW</Button>
         <Divider />
         <FormControl>
           <Stack gap='1rem' fontFamily='Poppins, sans-serif' color='Brand.Penn'>
@@ -149,15 +155,14 @@ const ContactForm: React.FC = () => {
                 transition='opacity .3s ease-in'
                 fontWeight='bold'
                 color={
-                  message === 'Your Message Was Sent' ? 'Brand.White' : 'red.600'
+                  message === 'Your Message Was Sent'
+                    ? 'Brand.White'
+                    : 'red.600'
                 }
               >
                 {message.length > 0 && message}
               </Text>
-              <Button
-                w={['100%', '10rem']}
-                onClick={handleSend}
-              >
+              <Button w={['100%', '10rem']} onClick={handleSend}>
                 {isLoading ? <Spinner /> : 'Send'}
               </Button>
             </Flex>

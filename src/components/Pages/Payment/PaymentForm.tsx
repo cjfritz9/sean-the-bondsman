@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import {
   Button,
   Checkbox,
@@ -14,27 +14,35 @@ import {
   ModalBody,
   ModalCloseButton,
   OrderedList,
-  ListItem
+  ListItem,
+  useToast
 } from '@chakra-ui/react';
 import { SiteContext } from '../../../context/SiteContext';
 
 const PaymentForm: React.FC = () => {
-  const [showCallTooltip, setShowCallTooltip] = useState(false);
   const [showTos, setShowTos] = useState(false);
   const [agreeTos, setAgreeTos] = useState(false);
   const { isGreaterThan768 } = useContext<any>(SiteContext);
+
+  const toast = useToast();
+  const toastIdRef = useRef<any>();
 
   const handleClick = () => {
     window.open('https://buy.stripe.com/test_aEUfZE8Sz1L17qE7ss', '_blank');
   };
 
   const handleCall = () => {
+    if (toastIdRef.current) {
+      toast.close(toastIdRef.current);
+    }
     if (isGreaterThan768) {
       navigator.clipboard.writeText('7859692735');
-      setShowCallTooltip(true);
-      setTimeout(() => {
-        setShowCallTooltip(false);
-      }, 2500);
+      toastIdRef.current = toast({
+        title: 'Phone Number Copied',
+        status: 'info',
+        duration: 5000,
+        isClosable: true
+      });
     } else {
       window.open('tel:7859692735');
     }
@@ -46,7 +54,13 @@ const PaymentForm: React.FC = () => {
   };
 
   return (
-    <Stack w='100%' alignItems='center' bgColor='Brand.Celestial' py='6rem' px='1rem'>
+    <Stack
+      w='100%'
+      alignItems='center'
+      bgColor='Brand.Celestial'
+      py='6rem'
+      px='1rem'
+    >
       <Modal isOpen={showTos} onClose={() => setShowTos(false)}>
         <ModalOverlay />
         <ModalContent maxH='80%'>
@@ -120,23 +134,12 @@ const PaymentForm: React.FC = () => {
           continue to make your payment quickly and securely by clicking the
           button below and paying with Stripe. If you have not done this, please
           call Sean before continuing:{' '}
-          {showCallTooltip ? (
-            <Tooltip label='Phone Number Copied' closeOnClick={false}>
-              <u
-                style={{ cursor: 'pointer', fontWeight: 'bold' }}
-                onClick={handleCall}
-              >
-                785-969-2735
-              </u>
-            </Tooltip>
-          ) : (
-            <u
-              style={{ cursor: 'pointer', fontWeight: 'bold' }}
-              onClick={handleCall}
-            >
-              785-969-2735
-            </u>
-          )}
+          <u
+            style={{ cursor: 'pointer', fontWeight: 'bold' }}
+            onClick={handleCall}
+          >
+            785-969-2735
+          </u>
         </Text>
         <Stack alignItems='center'>
           <Text>
