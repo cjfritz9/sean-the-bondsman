@@ -5,7 +5,6 @@ import {
   Heading,
   Stack,
   Text,
-  Tooltip,
   Modal,
   ModalOverlay,
   ModalContent,

@@ -10,7 +10,6 @@ import {
   Spinner,
   Heading,
   Divider,
-  Tooltip,
   useToast
 } from '@chakra-ui/react';
 import { validateMailForm } from '../../../utils/helpers';

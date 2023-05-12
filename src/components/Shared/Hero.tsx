@@ -1,11 +1,10 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useRef } from 'react';
 import {
   Box,
   Button,
   Flex,
   Heading,
   Stack,
-  Tooltip,
   useToast
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router';
