@@ -6,11 +6,7 @@ import SeantheBondsman from '../../../assets/SeantheBondsman.webp';
 const About: React.FC = () => {
   return (
     <Box py={['2rem', '4rem']} bgColor='Brand.White' px={['1rem', '2rem']}>
-      <Heading
-        variant='heroText'
-        color='black'
-        mb='2rem'
-      >
+      <Heading variant='heroText' color='black' mb='2rem'>
         Meet Sean the Bondsman
       </Heading>
       <Flex
@@ -37,7 +33,7 @@ const About: React.FC = () => {
             working on staying clean myself and helping others work toward their
             recovery as well.
           </Text>
-          <Text>
+          <Text textAlign={['center', 'center', 'center', 'center', 'left']}>
             I've worked as a Case Manager here in Topeka, putting in time with
             persons who were suicidal and feeling hopeless, and persons in our
             community struggling with Severe and Persistent Mental Illness,
@@ -47,13 +43,13 @@ const About: React.FC = () => {
             hopeless, I got the help I needed and I continue to get that help
             today.
           </Text>
-          <Text>
+          <Text textAlign={['center', 'center', 'center', 'center', 'left']}>
             I'm unusual in the Bail Bonds world because of this and I'm proud of
             the continued recovery the Topeka community helps me achieve. I've
             been in a hole that I didn't know how to get out of, I found a way
             out. I'm grateful.
           </Text>
-          <Text>
+          <Text textAlign={['center', 'center', 'center', 'center', 'left']}>
             I know we offer a “free consultation”, and I hope to be more
             comprehensive. Sometimes you're just not sure if it is the right
             time or right thing to do to bond someone out of jail. While I can't
