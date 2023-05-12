@@ -1,12 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Stack,
-  useToast
-} from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Stack, useToast } from '@chakra-ui/react';
 import { useNavigate } from 'react-router';
 import { SiteContext } from '../../context/SiteContext';
 import { HeroProps } from '../../models/Props';
