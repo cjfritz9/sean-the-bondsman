@@ -1,13 +1,43 @@
-import React, { useContext } from 'react';
-import { Box, Button, Flex, Heading, Stack, Text } from '@chakra-ui/react';
+import React, { useContext, useRef } from 'react';
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  useToast
+} from '@chakra-ui/react';
 import { SiteContext } from '../../../context/SiteContext';
 
 const GetStarted: React.FC = () => {
-  const { docusignLink } = useContext<any>(SiteContext);
+  const { docusignLink, isGreaterThan768 } = useContext<any>(SiteContext);
+
+  const toast = useToast();
+  const toastIdRef = useRef<any>();
 
   const handleNav = () => {
     window.open(docusignLink, '_blank');
   };
+
+  const handleCall = () => {
+    if (toastIdRef.current) {
+      toast.close(toastIdRef.current);
+    }
+    if (isGreaterThan768) {
+      navigator.clipboard.writeText('7859692735');
+      toastIdRef.current = toast({
+        title: 'Phone Number Copied',
+        variant: 'top-accent',
+        status: 'info',
+        duration: 5000,
+        isClosable: true
+      });
+    } else {
+      window.open('tel:7859692735');
+    }
+  };
+
   return (
     <Box px='1rem' py={['2rem', '3rem', '5rem']} bgColor='Brand.White'>
       <Stack
@@ -36,7 +66,7 @@ const GetStarted: React.FC = () => {
             and quickly bail out your loved one from jail.
           </Text>
           <Flex gap='1rem'>
-            <Button variant='altButton'>Call Now</Button>
+            <Button variant='altButton' onClick={handleCall}>Call Now</Button>
             <Button
               variant='altButton'
               bgColor='Brand.French'
