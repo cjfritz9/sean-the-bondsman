@@ -54,7 +54,7 @@ const About: React.FC = () => {
             been in a hole that I didn't know how to get out of, I looked for a
             way out and I'm grateful others showed me the way..
           </Text>
-          <Text>
+          <Text textAlign={['center', 'center', 'center', 'center', 'left']}>
             We offer a “free consultation”, but I hope to be more comprehensive.
             Sometimes you're just not sure if it is the right time or right
             thing to do to bond someone out of jail. While I can't make that
