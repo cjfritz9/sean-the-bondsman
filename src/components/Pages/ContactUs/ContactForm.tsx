@@ -86,7 +86,7 @@ const ContactForm: React.FC = () => {
     <Flex
       w='100%'
       justifyContent='center'
-      bgColor='#00BBFF'
+      bgColor='#166494'
       py={['2rem', '3rem', '6rem']}
       px='1rem'
     >
@@ -95,10 +95,11 @@ const ContactForm: React.FC = () => {
           variant='iwtTitle'
           fontFamily='Poppins, sans-serif'
           textAlign='center'
+          color='Brand.White'
         >
           Get In Touch
         </Heading>
-        <Text>
+        <Text color='Brand.White'>
           If you need help in a timely manner please give Sean a call and he can
           help you ASAP. For any other general inquiries you can fill the form
           out below.

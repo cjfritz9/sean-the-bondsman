@@ -14,8 +14,8 @@ import PaymentPage from './Pages/PaymentPage';
 import Announcement from './Shared/Announcement';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 
-import backgroundImage from '../assets/handcuffs-off.webp';
-import mobileBg from '../assets/handcuffs-off-mobile.webp';
+import backgroundImage from '../assets/logo-lg.webp';
+import mobileBg from '../assets/logo-mobile.webp';
 import alternateBg from '../assets/topeka-capital-building.webp';
 import mobileAltBg from '../assets/topeka-capital-building-mobile.webp';
 import PaymentSuccessPage from './Pages/PaymentSuccessPage';
@@ -52,7 +52,7 @@ const App: React.FC = () => {
       }
       bgAttachment='fixed'
       fontFamily='Poppins, sans-serif'
-      bgPosition='center'
+      bgPosition='top'
       bgRepeat='no-repeat'
       bgSize='cover'
     >

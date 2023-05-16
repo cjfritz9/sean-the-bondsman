@@ -11,7 +11,7 @@ const theme = extendTheme({
     Brand: {
       White: '#FFFFFF',
       French: '#D7C9CE',
-      Celestial: '#2A94D4',
+      Celestial: '#166494',
       Penn: '#0D2533',
       Persian: '#2541B2',
       Rose: '#AF929D'

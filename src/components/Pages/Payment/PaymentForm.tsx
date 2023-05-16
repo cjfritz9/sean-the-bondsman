@@ -1,57 +1,62 @@
-import React, { useContext, useRef, useState } from 'react';
+import React,
+{
+  // useContext,
+  // useRef,
+  // useState
+} from 'react';
 import {
-  Button,
-  Checkbox,
   Heading,
   Stack,
-  Text,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  OrderedList,
-  ListItem,
-  useToast
+  // Button,
+  // Checkbox,
+  // Text,
+  // Modal,
+  // ModalOverlay,
+  // ModalContent,
+  // ModalHeader,
+  // ModalFooter,
+  // ModalBody,
+  // ModalCloseButton,
+  // OrderedList,
+  // ListItem,
+  // useToast
 } from '@chakra-ui/react';
-import { SiteContext } from '../../../context/SiteContext';
+// import { SiteContext } from '../../../context/SiteContext';
 
 const PaymentForm: React.FC = () => {
-  const [showTos, setShowTos] = useState(false);
-  const [agreeTos, setAgreeTos] = useState(false);
-  const { isGreaterThan768 } = useContext<any>(SiteContext);
+  // const [showTos, setShowTos] = useState(false);
+  // const [agreeTos, setAgreeTos] = useState(false);
+  // const { isGreaterThan768 } = useContext<any>(SiteContext);
 
-  const toast = useToast();
-  const toastIdRef = useRef<any>();
+  // const toast = useToast();
+  // const toastIdRef = useRef<any>();
 
-  const handleClick = () => {
-    window.open('https://buy.stripe.com/test_aEUfZE8Sz1L17qE7ss', '_blank');
-  };
+  // const handleClick = () => {
+  //   window.open('https://buy.stripe.com/test_aEUfZE8Sz1L17qE7ss', '_blank');
+  // };
 
-  const handleCall = () => {
-    if (toastIdRef.current) {
-      toast.close(toastIdRef.current);
-    }
-    if (isGreaterThan768) {
-      navigator.clipboard.writeText('7859692735');
-      toastIdRef.current = toast({
-        title: 'Phone Number Copied',
-        variant: 'top-accent',
-        status: 'info',
-        duration: 5000,
-        isClosable: true
-      });
-    } else {
-      window.open('tel:7859692735');
-    }
-  };
+  // const handleCall = () => {
+  //   if (toastIdRef.current) {
+  //     toast.close(toastIdRef.current);
+  //   }
+  //   if (isGreaterThan768) {
+  //     navigator.clipboard.writeText('7859692735');
+  //     toastIdRef.current = toast({
+  //       title: 'Phone Number Copied',
+  //       variant: 'top-accent',
+  //       status: 'info',
+  //       duration: 5000,
+  //       isClosable: true
+  //     });
+  //   } else {
+  //     window.open('tel:7859692735');
+  //   }
+  // };
 
-  const handleModalAgree = () => {
-    setAgreeTos(true);
-    setShowTos(false);
-  };
+  // const handleModalAgree = () => {
+  //   setAgreeTos(true);
+  //   setShowTos(false);
+  // };
 
   return (
     <Stack
@@ -60,8 +65,12 @@ const PaymentForm: React.FC = () => {
       bgColor='Brand.Celestial'
       py='6rem'
       px='1rem'
+      minH='50dvh'
     >
-      <Modal isOpen={showTos} onClose={() => setShowTos(false)}>
+      <Heading variant='iwtTitle' color='Brand.White'>
+          Coming Soon...
+        </Heading>
+      {/* <Modal isOpen={showTos} onClose={() => setShowTos(false)}>
         <ModalOverlay />
         <ModalContent maxH='80%'>
           <ModalHeader>Terms of Service</ModalHeader>
@@ -127,8 +136,16 @@ const PaymentForm: React.FC = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-      <Stack maxW='480px' alignItems='center' textAlign='center' gap='2rem'>
-        <Heading variant='iwtTitle'>Pay Quickly & Securely</Heading>
+      <Stack
+        maxW='480px'
+        alignItems='center'
+        textAlign='center'
+        gap='2rem'
+        color='Brand.White'
+      >
+        <Heading variant='iwtTitle' color='Brand.White'>
+          Pay Quickly & Securely
+        </Heading>
         <Text>
           If you have already discussed your bail bond amount with Sean you can
           continue to make your payment quickly and securely by clicking the
@@ -163,7 +180,7 @@ const PaymentForm: React.FC = () => {
         <Button onClick={handleClick} isDisabled={!agreeTos}>
           Continue To Pay
         </Button>
-      </Stack>
+      </Stack> */}
     </Stack>
   );
 };

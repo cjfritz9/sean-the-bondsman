@@ -15,7 +15,7 @@ export const heroSubtext = defineStyle({
   textAlign: 'center',
   fontSize: ['24px', '32px', '40px'],
   fontFamily: 'Kanit, sans-serif',
-  color: 'Brand.Celestial',
+  color: '#2A94D4',
   textShadow: '0 0 3px black',
   transition: 'font-size .3s ease'
 });
