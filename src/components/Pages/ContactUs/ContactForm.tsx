@@ -99,7 +99,10 @@ const ContactForm: React.FC = () => {
         >
           Get In Touch
         </Heading>
-        <Text color='Brand.White'>
+        <Text
+          color='Brand.White'
+          textAlign={['center', 'center', 'center', 'center', 'left']}
+        >
           If you need help in a timely manner please give Sean a call and he can
           help you ASAP. For any other general inquiries you can fill the form
           out below.

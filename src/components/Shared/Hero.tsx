@@ -209,7 +209,7 @@ const Hero: React.FC<HeroProps> = ({ variant }) => {
       >
         {!isGreaterThan768 && (
           <Heading w='100%' variant='heroText'>
-            ABOUT US
+            ABOUT
           </Heading>
         )}
       </Stack>
