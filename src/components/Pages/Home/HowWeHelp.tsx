@@ -16,21 +16,21 @@ const HowWeHelp: React.FC = () => {
         flexDir={['column', 'column', 'column', 'row', 'row']}
         gap={['2rem', '2rem', '2rem', '4rem']}
         justifyContent='center'
-        alignItems='center'
+        alignItems='flex-start'
       >
         <Image src={seanMotorcycle} w={['360px']} />
         <Stack
           maxW={['360px', '480px']}
           gap='2rem'
-          // justifyContent='center'
           textAlign='center'
           alignItems='center'
         >
           <Heading
+            w='100%'
             variant='iwtTitle'
             textAlign={['center', 'center', 'center', 'left']}
           >
-            How We Can Help You Or Your Family
+            How We Can Help
           </Heading>
           <Text
             letterSpacing='wider'
