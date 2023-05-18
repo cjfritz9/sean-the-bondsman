@@ -14,4 +14,4 @@ Disallow: /author/
 Disallow: /contact-us.html
 Disallow: /payment.html
 Disallow: /privacy.html
-Sitemap: https://www.development-topekabailbonds.netlify.app/sitemap.xml
+Sitemap: https://seanthebondsman.com/sitemap.xml
