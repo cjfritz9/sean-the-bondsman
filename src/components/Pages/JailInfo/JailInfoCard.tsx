@@ -32,12 +32,12 @@ const JailInfoCard: React.FC<JailInfoCardProps> = ({
   const toast = useToast();
   const toastIdRef = useRef<any>();
 
-  const handleCall = () => {
+  const handleCall = (number: string) => {
     if (toastIdRef.current) {
       toast.close(toastIdRef.current);
     }
     if (isGreaterThan768) {
-      navigator.clipboard.writeText('7859692735');
+      navigator.clipboard.writeText(number);
       toastIdRef.current = toast({
         title: 'Phone Number Copied',
         variant: 'top-accent',
@@ -46,7 +46,7 @@ const JailInfoCard: React.FC<JailInfoCardProps> = ({
         isClosable: true
       });
     } else {
-      window.open('tel:7859692735');
+      window.open(`tel:${number}`);
     }
   };
 
@@ -84,7 +84,7 @@ const JailInfoCard: React.FC<JailInfoCardProps> = ({
                   px='1rem'
                   py='.5rem'
                   justifyContent='space-between'
-                  onClick={handleCall}
+                  onClick={() => handleCall(phone)}
                 >
                   <Text>{phone}</Text>
                   <Icon as={BsFillTelephoneFill} />

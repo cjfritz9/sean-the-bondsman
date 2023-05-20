@@ -67,9 +67,6 @@ const PaymentForm: React.FC = () => {
       px='1rem'
       minH='50dvh'
     >
-      {/* <Heading variant='iwtTitle' color='Brand.White'>
-          Coming Soon...
-        </Heading> */}
       <Modal isOpen={showTos} onClose={() => setShowTos(false)}>
         <ModalOverlay />
         <ModalContent maxH='80%'>

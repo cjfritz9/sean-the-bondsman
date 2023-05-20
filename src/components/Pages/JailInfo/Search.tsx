@@ -68,7 +68,7 @@ const Search: React.FC<SearchProps> = ({
           size='lg'
           bgColor='whiteAlpha.600'
           borderColor='Brand.Penn'
-          placeholder='County name'
+          placeholder='Other counties...'
           onChange={(e) => updateDebounceText(e.target.value)}
         />
 
