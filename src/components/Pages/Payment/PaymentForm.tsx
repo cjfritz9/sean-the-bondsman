@@ -1,62 +1,62 @@
 import React,
 {
-  // useContext,
-  // useRef,
-  // useState
+  useContext,
+  useRef,
+  useState
 } from 'react';
 import {
   Heading,
   Stack,
-  // Button,
-  // Checkbox,
-  // Text,
-  // Modal,
-  // ModalOverlay,
-  // ModalContent,
-  // ModalHeader,
-  // ModalFooter,
-  // ModalBody,
-  // ModalCloseButton,
-  // OrderedList,
-  // ListItem,
-  // useToast
+  Button,
+  Checkbox,
+  Text,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  OrderedList,
+  ListItem,
+  useToast
 } from '@chakra-ui/react';
-// import { SiteContext } from '../../../context/SiteContext';
+import { SiteContext } from '../../../context/SiteContext';
 
 const PaymentForm: React.FC = () => {
-  // const [showTos, setShowTos] = useState(false);
-  // const [agreeTos, setAgreeTos] = useState(false);
-  // const { isGreaterThan768 } = useContext<any>(SiteContext);
+  const [showTos, setShowTos] = useState(false);
+  const [agreeTos, setAgreeTos] = useState(false);
+  const { isGreaterThan768 } = useContext<any>(SiteContext);
 
-  // const toast = useToast();
-  // const toastIdRef = useRef<any>();
+  const toast = useToast();
+  const toastIdRef = useRef<any>();
 
-  // const handleClick = () => {
-  //   window.open('https://buy.stripe.com/test_aEUfZE8Sz1L17qE7ss', '_blank');
-  // };
+  const handleClick = () => {
+    window.open('https://square.link/u/dmoUQns6', '_blank');
+  };
 
-  // const handleCall = () => {
-  //   if (toastIdRef.current) {
-  //     toast.close(toastIdRef.current);
-  //   }
-  //   if (isGreaterThan768) {
-  //     navigator.clipboard.writeText('7859692735');
-  //     toastIdRef.current = toast({
-  //       title: 'Phone Number Copied',
-  //       variant: 'top-accent',
-  //       status: 'info',
-  //       duration: 5000,
-  //       isClosable: true
-  //     });
-  //   } else {
-  //     window.open('tel:7859692735');
-  //   }
-  // };
+  const handleCall = () => {
+    if (toastIdRef.current) {
+      toast.close(toastIdRef.current);
+    }
+    if (isGreaterThan768) {
+      navigator.clipboard.writeText('7859692735');
+      toastIdRef.current = toast({
+        title: 'Phone Number Copied',
+        variant: 'top-accent',
+        status: 'info',
+        duration: 5000,
+        isClosable: true
+      });
+    } else {
+      window.open('tel:7859692735');
+    }
+  };
 
-  // const handleModalAgree = () => {
-  //   setAgreeTos(true);
-  //   setShowTos(false);
-  // };
+  const handleModalAgree = () => {
+    setAgreeTos(true);
+    setShowTos(false);
+  };
 
   return (
     <Stack
@@ -67,10 +67,10 @@ const PaymentForm: React.FC = () => {
       px='1rem'
       minH='50dvh'
     >
-      <Heading variant='iwtTitle' color='Brand.White'>
+      {/* <Heading variant='iwtTitle' color='Brand.White'>
           Coming Soon...
-        </Heading>
-      {/* <Modal isOpen={showTos} onClose={() => setShowTos(false)}>
+        </Heading> */}
+      <Modal isOpen={showTos} onClose={() => setShowTos(false)}>
         <ModalOverlay />
         <ModalContent maxH='80%'>
           <ModalHeader>Terms of Service</ModalHeader>
@@ -83,23 +83,23 @@ const PaymentForm: React.FC = () => {
             <OrderedList>
               <ListItem>
                 Payment Amounts: Payment amounts must be discussed and arranged
-                beforehand via Stripe, our secure online payment platform. We
-                accept all major credit cards through Stripe. Payment amounts
+                beforehand via Square, our secure online payment platform. We
+                accept all major credit cards through Square. Payment amounts
                 must be agreed upon by both parties before any payments are
                 processed.
               </ListItem>
               <ListItem>
                 Payment Processing: Once a payment amount has been agreed upon,
-                the payment will be processed through Stripe. Please note that
+                the payment will be processed through Square. Please note that
                 we do not store any credit card information on our servers.
-                Stripe is a third-party payment processor that uses
+                Square is a third-party payment processor that uses
                 industry-leading security measures to ensure that your payment
                 information is kept secure.
               </ListItem>
               <ListItem>
                 Refunds: Refunds will be issued at the discretion of
                 Seanthebondsman.com. If a refund is issued, it will be processed
-                through Stripe and may take up to 5-7 business days to appear in
+                through Square and may take up to 5-7 business days to appear in
                 your account.
               </ListItem>
               <ListItem>
@@ -149,7 +149,7 @@ const PaymentForm: React.FC = () => {
         <Text>
           If you have already discussed your bail bond amount with Sean you can
           continue to make your payment quickly and securely by clicking the
-          button below and paying with Stripe. If you have not done this, please
+          button below and paying with Square. If you have not done this, please
           call Sean before continuing:{' '}
           <u
             style={{ cursor: 'pointer', fontWeight: 'bold' }}
@@ -177,10 +177,10 @@ const PaymentForm: React.FC = () => {
             I agree
           </Checkbox>
         </Stack>
-        <Button onClick={handleClick} isDisabled={!agreeTos}>
+        <Button bgColor='white' color='black' onClick={handleClick} isDisabled={!agreeTos}>
           Continue To Pay
         </Button>
-      </Stack> */}
+      </Stack>
     </Stack>
   );
 };
