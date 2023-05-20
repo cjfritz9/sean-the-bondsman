@@ -59,10 +59,9 @@ const Search: React.FC<SearchProps> = ({
   });
 
   return (
-    <Box>
-      <Flex pos='relative' alignItems='center'>
+      <Flex pt='1.5rem' w='100%' pos='relative' alignItems='center'>
         <Input
-          w={['320px', '400px']}
+          w='100%'
           _hover={{ borderColor: 'Brand.Celestial' }}
           _focus={{ bgColor: 'Brand.White' }}
           size='lg'
@@ -83,7 +82,6 @@ const Search: React.FC<SearchProps> = ({
           zIndex={5}
         />
       </Flex>
-    </Box>
   );
 };
 

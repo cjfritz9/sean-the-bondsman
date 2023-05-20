@@ -74,12 +74,12 @@ const JailInfoWrapper: React.FC = () => {
             501 SE 8th Ave, Topeka, KS 66607
           </Button>
         </Flex>
-      </Stack>
       <Search
         setSearchResults={setSearchResults}
         setSearchLoading={setSearchLoading}
         setNoResults={setNoResults}
       />
+      </Stack>
       <Flex
         flexWrap='wrap'
         w='100%'
