@@ -37,9 +37,11 @@ npm run start
 * Github: [@cjfritz9](https://github.com/cjfritz9)
 * LinkedIn: [@cj-fritz](https://linkedin.com/in/cj-fritz)
 
-## Show your support
+## Future Developers
 
-Give a ⭐️ if this project helped you!
+If you need any assistance with making changes or would like access to domains, please send me an e-mail: 
+
+📧 contact@fritzdesign.co
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
