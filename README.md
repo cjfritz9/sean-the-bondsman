@@ -8,7 +8,7 @@
 
 > This is the source code for https://seanthebondsman.com. This readme serves as documentation to any future developer that may work on the website.
 
-### ✨ [Demo](https://development-topekabailbonds.netlify.app)
+### ✨ [Deployment](https://www.seanthebondsman.com)
 
 ## Tech Stack
 
