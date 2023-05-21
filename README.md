@@ -16,6 +16,7 @@
 * [React](https://react.dev) - Frontend Framework
 * [Chakra UI](https://chakra-ui.com/getting-started) - CSS Framework
 * [Framer Motion](https://chakra-ui.com/getting-started/with-framer) - Animations
+* [Node.js](https://www.nodejs.org) - Mail Server (Google App Engine)
 
 ## Install
 
