@@ -30,6 +30,12 @@ npm install
 npm run start
 ```
 
+## Theme Typings
+
+```sh
+npm run theme
+```
+
 ## Author
 
 👤 **C.J. Fritz**
