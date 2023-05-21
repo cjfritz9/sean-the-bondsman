@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> This is the source code for seanthebondsman.com/bailbondstopeka.com/topekabailbonds.com. This readme serves as documentation to any future developer that will work on the website.
+> This is the source code for https://seanthebondsman.com. This readme serves as documentation to any future developer that may work on the website.
 
 ### ✨ [Demo](https://development-topekabailbonds.netlify.app)
 
