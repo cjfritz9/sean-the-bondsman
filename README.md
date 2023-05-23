@@ -6,9 +6,9 @@
   </a>
 </p>
 
-> This is the source code for seanthebondsman.com/bailbondstopeka.com/topekabailbonds.com. This readme serves as documentation to any future developer that will work on the website.
+> This is the source code for https://seanthebondsman.com. This readme serves as documentation to any future developer that may work on the website.
 
-### ✨ [Demo](https://development-topekabailbonds.netlify.app)
+### ✨ [Deployment](https://www.seanthebondsman.com)
 
 ## Tech Stack
 
@@ -16,6 +16,7 @@
 * [React](https://react.dev) - Frontend Framework
 * [Chakra UI](https://chakra-ui.com/getting-started) - CSS Framework
 * [Framer Motion](https://chakra-ui.com/getting-started/with-framer) - Animations
+* [Node.js](https://www.nodejs.org) - Mail Server (Google App Engine)
 
 ## Install
 
@@ -29,6 +30,12 @@ npm install
 npm run start
 ```
 
+## Theme Typings
+
+```sh
+npm run theme
+```
+
 ## Author
 
 👤 **C.J. Fritz**
@@ -37,9 +44,11 @@ npm run start
 * Github: [@cjfritz9](https://github.com/cjfritz9)
 * LinkedIn: [@cj-fritz](https://linkedin.com/in/cj-fritz)
 
-## Show your support
+## Future Developers
 
-Give a ⭐️ if this project helped you!
+If you need any assistance with making changes or would like access to domains, please send me an e-mail: 
+
+📧 contact@fritzdesign.co
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
