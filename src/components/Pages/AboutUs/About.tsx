@@ -52,7 +52,7 @@ const About: React.FC = () => {
             I'm unusual in the Bail Bonds world because of this and I'm proud of
             the continued recovery the Topeka community helps me achieve. I've
             been in a hole that I didn't know how to get out of, I looked for a
-            way out and I'm grateful others showed me the way..
+            way out and I'm grateful others showed me the way.
           </Text>
           <Text textAlign={['center', 'center', 'center', 'center', 'left']}>
             We offer a “free consultation”, but I hope to be more comprehensive.
