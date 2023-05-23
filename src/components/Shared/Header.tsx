@@ -191,12 +191,12 @@ const Header: React.FC = () => {
             >
               <Image
                 pos='absolute'
-                bottom={0}
-                left={0}
+                bottom='32px'
+                left='16px'
                 src={logoSM}
                 alt='Logo'
                 zIndex={-1}
-                filter='brightness(.3)'
+                filter='brightness(.75)'
                 transform='scaleX(-1)'
               />
               <Link
