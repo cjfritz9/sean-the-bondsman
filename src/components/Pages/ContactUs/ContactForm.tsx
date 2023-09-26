@@ -47,7 +47,6 @@ const ContactForm: React.FC = () => {
     ).value;
 
     const formStatusMsg = validateMailForm(userInput);
-    console.log(formStatusMsg);
 
     if (formStatusMsg !== 'Success') {
       setIsLoading(false);

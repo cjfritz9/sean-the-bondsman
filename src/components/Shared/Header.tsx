@@ -34,7 +34,7 @@ const Header: React.FC = () => {
             cursor='pointer'
             onClick={() => navigate('/')}
           >
-            <Image src={logoSM} h='72px' w='110.5px' alt='Logo' />
+            <Image src={logoSM} h='72px' w='110.5px' objectFit='cover' alt='Logo' />
             <Heading
               display={['none', 'none', 'none', 'block']}
               fontSize={['24px', '24px', '20px', '20px', '24px']}

@@ -18,7 +18,7 @@ const HowWeHelp: React.FC = () => {
         justifyContent='center'
         alignItems='flex-start'
       >
-        <Image src={seanMotorcycle} w={['360px']} />
+        <Image src={seanMotorcycle} alt='Sean riding motorcycle' h='100%' w={['360px']} />
         <Stack
           maxW={['360px', '480px']}
           gap='2rem'
