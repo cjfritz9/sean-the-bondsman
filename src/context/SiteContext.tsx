@@ -15,7 +15,7 @@ export class SiteProvider extends React.Component {
     let pageTitle = '';
 
     if (pathname === '/') {
-      return 'Sean the Bondsman | Topeka Bail Bonds | Kansas Multiple County Bail Assistance';
+      return 'Sean the Bondsman | Topeka Bail Bonds | Bail Bonds Topeka, KS | Kansas Bail Assistance';
     }
 
     if (pathname === '/forms-and-info') {
